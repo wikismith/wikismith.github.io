@@ -1,20 +1,18 @@
 <!DOCTYPE html><html lang='en'><head><title>Wikismith Render Error</title></head><body style='margin: 2em;'>
 <h1 class='text-muted'>Wikismith Render Error</h1>
-<p class='lead'>Failed to render page index with module undefined</p>
-<div class='error-box'>Error: Cannot find module &#39;/home/vagrant/RubymineProjects/wikismith/wikismith_modules/bs3/wikismith.js&#39;</div>
+<p class='lead'>Failed to render page undefined with module bs3</p>
+<div class='error-box'>TypeError: Cannot read property &#39;module&#39; of undefined</div>
 
 <h3>Stack Trace</h3>
-<pre>Error: Cannot find module '/home/vagrant/RubymineProjects/wikismith/wikismith_modules/bs3/wikismith.js'
-    at Function.Module._resolveFilename (module.js:338:15)
-    at Function.require.resolve (module.js:384:19)
-    at pageContent (/home/vagrant/RubymineProjects/wikismith/index.js:107:42)
+<pre>Error: Cannot read property 'module' of undefined
+    at pageContent (/home/vagrant/RubymineProjects/wikismith/index.js:105:42)
+         102:         }
+         103:         else
          104:         {
          105:             var module_name = file.params.module || 'minimum'
          106:             var modulePath = path.join(__dirname, 'wikismith_modules', module_name, 'wikismith.js');
          107:             delete require.cache[require.resolve(modulePath)]
          108:             var wikismith_module = require(modulePath);
-         109:             var h1 = wikismith_module.render(file);
-         110:             //var h2 = makeWiki(h1, page);
     at /home/vagrant/RubymineProjects/wikismith/index.js:51:24
           48: 
           49: function render_page() {
@@ -56,5 +54,21 @@
           71:       queueData(data, number)
           72:     }
           73: 
-          74:     if (err) {</pre>
+          74:     if (err) {
+    at /home/vagrant/RubymineProjects/wikismith/node_modules/event-stream/node_modules/map-stream/index.js:85:7
+          82:   // the item in the stream.
+          83:   function wrappedMapper (input, number, callback) {
+          84:     return mapper.call(null, input, function(err, data){
+          85:       callback(err, data, number)
+          86:     })
+          87:   }
+          88: 
+    at /home/vagrant/RubymineProjects/wikismith/index.js:73:9
+          70: function decorateModule() {
+          71:     return es.map(function (file, cb) {
+          72:         file.module = path.dirname(file.path).split(path.sep).slice(-1)[0]
+          73:         cb(null, file);
+          74:     });
+          75: }
+          76: </pre>
 </body></html>
