@@ -1,0 +1,20 @@
+.navbar-header img {
+    height: 5em;
+    position: absolute;
+    top: -0.75em;
+    margin-left: -1em;
+}
+
+
+.navbar-header .navbar-brand {
+    color: white;
+    padding-left: 4.5em;
+}
+
+.navbar {
+    background: #1f1f1f;
+}
+
+.navbar-brand {
+    font-family: Roboto Slab;
+}
