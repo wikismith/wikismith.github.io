@@ -221,8 +221,11 @@ body {
         font-family: 'Roboto Slab', sans-serif;
         font-size: 60px;
         line-height: 1;
+        margin-right: 294px;
     }
-}@media (min-width:992px) {
+}
+
+@media (min-width:992px) {
     .bs-docs-header h1, .bs-docs-header p {
         margin-right: 380px;
     }

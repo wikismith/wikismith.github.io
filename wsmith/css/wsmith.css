@@ -1,10 +1,8 @@
-.navbar-header img {
-    height: 5em;
-    position: absolute;
-    top: -0.75em;
-    margin-left: -1em;
-}
+/* Fonts and Colors */
 
+.bs-docs-header h1 {
+    font-family: 'Roboto Slab', sans-serif;
+}
 
 .navbar-header .navbar-brand {
     color: white;
@@ -18,3 +16,81 @@
 .navbar-brand {
     font-family: Roboto Slab;
 }
+
+/* Logo */
+
+.navbar-header img {
+    height: 5em;
+    position: absolute;
+    top: -0.75em;
+    margin-left: -1em;
+}
+
+/* Desk */
+
+@media (min-width:0px) {
+    .bs-docs-header img {
+        display: none;
+    }
+    .desk_container {
+        display: none;
+    }
+
+}
+
+@media (min-width:480px) {
+    .bs-docs-header img {
+        display: none;
+    }
+    .desk_container {
+        display: none;
+    }
+}
+
+@media (min-width:768px) {
+
+    .bs-docs-header img {
+        position: absolute;
+        bottom: -3.5em;
+        margin: 0px;
+        padding: 0px;
+        height: 12em;
+        display: block;
+        right: -1em;
+    }
+
+    .bs-docs-header {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        font-size: 24px;
+        text-align: left;
+    }
+
+    .bs-docs-header h1 {
+        font-family: 'Roboto Slab', sans-serif;
+        font-size: 60px;
+        line-height: 1;
+        margin-right: 294px;
+    }
+}
+
+@media (min-width:992px) {
+    .bs-docs-header img {
+        position: absolute;
+        bottom: -3.5em;
+        margin: 0px;
+        padding: 0px;
+        height: 15em;
+        display: block;
+        right: 1em;
+    }
+
+    .bs-docs-header h1 {
+        font-family: 'Roboto Slab', sans-serif;
+        font-size: 80px;
+        line-height: 1;
+        margin-right: 500px;
+    }
+}
+
+
