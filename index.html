@@ -99,8 +99,8 @@
 
 <div class="row">
 <div class="col-md-9" role="main">
-<!-- h1 --><h1 class="page-header" id="md-site-authoring-without-pain">Site Authoring Without Pain</h1><p>Wikismith is an <strong>open-source static site generator</strong> that&#39;s designed for fans of <strong>gulp</strong> and <strong>bower</strong>.</p>
-<!-- h3 --><div class='row'><div class='col-sm-4'><h3 id="md-get-excited">Get Excited</h3><video id="a240e92d" class="sublime" poster="https://cdn.sublimevideo.net/vpa/ms_800.jpg" width="100%" title="Midnight Sun" data-uid="a240e92d" preload="none">
+<p>Wikismith is the static site generator for Node.js, Gulp, and Bower</p>
+<!-- h3 --><div class='row'><div class='col-sm-4'><h3 id="md-get-familiar">Get Familiar</h3><video id="a240e92d" class="sublime" poster="https://cdn.sublimevideo.net/vpa/ms_800.jpg" width="100%" title="Midnight Sun" data-uid="a240e92d" preload="none">
   <source src="https://cdn.sublimevideo.net/vpa/ms_360p.mp4" />
   <source src="https://cdn.sublimevideo.net/vpa/ms_720p.mp4" data-quality="hd" />
   <source src="https://cdn.sublimevideo.net/vpa/ms_360p.webm" />
@@ -123,95 +123,57 @@ articles:</p>
 <li><p><a href='/installing_node_and_npm/index.html'>Installing Node and NPM</a></p>
 </li>
 </ul>
-</div></div><!-- h1 --><h1 class="page-header" id="md-get-started-with-help">Get Started with Help</h1><p><a href='/lorem_ipsum/index.html'>Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
-tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
-vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
-neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
-<p>Nam dictum sapien a velit rhoncus condimentum.
-orem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-t magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget tincidunt
-mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique vulputate. Sed lobortis,
-purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia neque neque et eros. Vestibulum
-mauris purus, pharetra in felis mollis, bibendum faucibus nisi. Nam dictum sapien a velit rhoncus
-condimentum.</p>
-<!-- h2 --><h2 id="md-duis-viverra">Duis Viverra</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
-tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
-vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
-neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
-<!-- h2 --><h2 id="md-code-examples">Code Examples</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
-tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
-vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
-neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
-<pre><code class="lang-javascript">    wikismith.watch_themes()
-        .pipe(wikismith.gulp_theme_assets())
-        .pipe(wikismith.module_pages())
-        .pipe(wikismith.render_page())
-        .pipe(wikismith.wiki())
-        .pipe(wikismith.unfolder_index())
+</div></div><!-- h2 --><h2 id="md-wikismith-features">Wikismith Features</h2><!-- h4 --><h4 id="md-convert-wiki-pages-into-site-pages">Convert wiki pages into site pages</h4><p>A Wikismith project uses <strong>gulp</strong> to convert <strong>pages</strong> using <strong>wikismith themes</strong>.</p>
+<!-- h4 --><h4 id="md-create-new-pages-based-on-wiki-syntax">Create new pages based on Wiki Syntax</h4><p>Wikismith identifies text in double brackets and</p>
+<!-- h2 --><h2 id="md-wiki-pages">Wiki Pages</h2><p>A wiki page is a simple text file composed for front-matter and markdown.
+The front-matter specifies meta information and selects the <strong>theme</strong>
+wikismith will use to render the page.</p>
+<!-- h4 --><h4 id="md-front-matter">Front Matter</h4><pre><code class="lang-yaml">---
+title: Congratulations!
+subtitle: You have successfully setup your Wikismith project.
+created: 2014/06/29 16:40 CST
+author: Jeffrey R. Hicks
+theme: bs3
+---
+</code></pre>
+<!-- h4 --><h4 id="md-markdown">Markdown</h4><pre><code class="lang-markdown"># Getting Started
+
+Nam dictum sapien a velit rhoncus condimentum. orem ipsum dolor sit amet,
+consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
+magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper
+sagittis elit, eget tincidunt
+
+#Lorem Ipsum
+
+Nam dictum sapien a velit rhoncus condimentum. orem ipsum dolor sit amet,
+consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
+magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper
+sagittis elit, eget tincidunt
+</code></pre>
+<p>Below the front matter</p>
+<!-- h2 --><h2 id="md-themes">Themes</h2><!-- h2 --><h2 id="md-gulpfile">Gulpfile</h2><pre><code class="lang-javascript">var app = express();
+var lr = tinylr();
+
+function serve() {
+    wikismith.watch()
+        .pipe(wikismith.pipeline())
         .pipe(gulp.dest(&#39;build&#39;))
         .pipe(es.map(function(file, cb) {
             lr.changed({body: { files: [file.path] }});
             cb(null, file);
-        }))
+        }));
+
+    app.use(livereload());
+    app.use(express.static(__dirname + &#39;/build&#39;));
+    app.listen(9292);
+    lr.listen(35729);
+}
+
+gulp.task(&#39;default&#39;, function() {
+    serve()
+});
 </code></pre>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
-tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
-vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
-neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
-<!-- h2 --><h2 id="md-quisque-interdum">Quisque interdum</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
-tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
-vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
-neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
-tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
-vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
-neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
-<!-- h2 --><h2 id="md-cras-varius">Cras Varius</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
-tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
-vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
-neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
-tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
-vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
-neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
-<!-- h2 --><h2 id="md-praesent-tempor">Praesent Tempor</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
-tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
-vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
-neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
-<!-- h2 --><h2 id="md-quisque-interdum2">Quisque interdum2</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
-tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
-vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
-tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
-vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
-neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
-<!-- h2 --><h2 id="md-cras-varius2">Cras Varius2</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
-tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
-vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
-neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
-<!-- h2 --><h2 id="md-praesent-tempor2">Praesent Tempor2</h2><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
-tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
-vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
-neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
-tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
-vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
-neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
-<!-- end -->
+<!-- h2 --><h2 id="md-philosophy">Philosophy</h2><!-- h4 --><h4 id="md-few-plugins">Few Plugins</h4><!-- h4 --><h4 id="md-no-cli">No CLI</h4><!-- h4 --><h4 id="md-bower">Bower</h4><!-- end -->
 </div>
 
 <div class="col-md-3">
@@ -220,7 +182,6 @@ neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum
             
             
             
-            <li><a href="#md-site-authoring-without-pain">Site Authoring Without Pain</a></li>
             
             
             
@@ -263,10 +224,10 @@ neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum
             
             
             
+            <li><a href="#md-wikismith-features">Wikismith Features</a></li>
             
             
             
-            <li><a href="#md-get-started-with-help">Get Started with Help</a></li>
             
             
             
@@ -274,13 +235,12 @@ neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum
             
             
             
-            <li><a href="#md-duis-viverra">Duis Viverra</a></li>
             
+            <li><a href="#md-wiki-pages">Wiki Pages</a></li>
             
             
             
             
-            <li><a href="#md-code-examples">Code Examples</a></li>
             
             
             
@@ -290,43 +250,21 @@ neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum
             
             
             
-            <li><a href="#md-quisque-interdum">Quisque interdum</a></li>
             
             
+            <li><a href="#md-themes">Themes</a></li>
             
             
             
+            <li><a href="#md-gulpfile">Gulpfile</a></li>
             
             
-            <li><a href="#md-cras-varius">Cras Varius</a></li>
             
             
             
+            <li><a href="#md-philosophy">Philosophy</a></li>
             
             
-            
-            
-            <li><a href="#md-praesent-tempor">Praesent Tempor</a></li>
-            
-            
-            
-            
-            
-            <li><a href="#md-quisque-interdum2">Quisque interdum2</a></li>
-            
-            
-            
-            
-            
-            
-            
-            <li><a href="#md-cras-varius2">Cras Varius2</a></li>
-            
-            
-            
-            
-            
-            <li><a href="#md-praesent-tempor2">Praesent Tempor2</a></li>
             
             
             
