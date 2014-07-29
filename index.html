@@ -99,9 +99,8 @@
 
 <div class="row">
 <div class="col-md-9" role="main">
-<!-- h1 --><h1 class="page-header" id="md-site-authoring-without-pain">Site Authoring Without Pain</h1><p>Wikismith is an <strong>open-source static site generator</strong> that&#39;s designed for fans of <strong>gulp</strong> and <strong>bower</strong>.
-It lets you use your favorite packaging and build tools and favors code over configuration.</p>
-<!-- h3 --><div class='row'><div class='col-sm-4'><h3 id="md-get-excited">Get Excited</h3><video id="a240e92d" class="sublime" poster="https://cdn.sublimevideo.net/vpa/ms_800.jpg" width="250" title="Midnight Sun" data-uid="a240e92d" preload="none">
+<!-- h1 --><h1 class="page-header" id="md-site-authoring-without-pain">Site Authoring Without Pain</h1><p>Wikismith is an <strong>open-source static site generator</strong> that&#39;s designed for fans of <strong>gulp</strong> and <strong>bower</strong>.</p>
+<!-- h3 --><div class='row'><div class='col-sm-4'><h3 id="md-get-excited">Get Excited</h3><video id="a240e92d" class="sublime" poster="https://cdn.sublimevideo.net/vpa/ms_800.jpg" width="100%" title="Midnight Sun" data-uid="a240e92d" preload="none">
   <source src="https://cdn.sublimevideo.net/vpa/ms_360p.mp4" />
   <source src="https://cdn.sublimevideo.net/vpa/ms_720p.mp4" data-quality="hd" />
   <source src="https://cdn.sublimevideo.net/vpa/ms_360p.webm" />
@@ -146,8 +145,8 @@ Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagi
 tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
 vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
 neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
-<pre><code class="lang-javascript">    wikismith.watch_modules()
-        .pipe(wikismith.build_module_assets())
+<pre><code class="lang-javascript">    wikismith.watch_themes()
+        .pipe(wikismith.gulp_theme_assets())
         .pipe(wikismith.module_pages())
         .pipe(wikismith.render_page())
         .pipe(wikismith.wiki())
