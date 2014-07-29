@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
-    <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-
     <title>
 
-        Getting started &middot; Bootstrap
+Wikismith - Streaming Static Site Generator for fans of Gulp and Bower
 
     </title>
 
@@ -27,6 +19,9 @@
     <link rel="stylesheet" href="/wsmith/css/railscasts.css">
     <link rel="stylesheet" href="/wsmith/css/wsmith.css">
     <!-- endinject -->
+
+
+
 
     <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -106,8 +101,30 @@
 
 <div class="row">
 <div class="col-md-9" role="main">
-<!-- h1 --><h1 class="page-header" id="md-barcamp-rules">Barcamp Rules</h1><p>Wikismith is an open-source node package that optimized for programmer happiness.  It works transparently with gulp and bower and favors coding over configuration.</p>
-<!-- h2 --><h2 id="md-lorem-ipsum">Lorem Ipsum</h2><p><a href='/lorem_ipsum/index.html'>Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
+<!-- h1 --><h1 class="page-header" id="md-static-site-authoring-that-doesn-39-t-hurt">Static site authoring that doesn&#39;t hurt</h1><p>Wikismith is an <strong>open-source static site generator</strong> that&#39;s designed for fans of <strong>gulp</strong> and <strong>bower</strong>.
+It lets you use your favorite packaging and build tools and favors code over configuration.</p>
+<!-- h3 --><div class='row'><div class='col-sm-4'><h3 id="md-you-are-curious">You are curious</h3><p>Watch</p>
+</div><!-- h3 --><div class='col-sm-4'><h3 id="md-you-want-to-get-started">You want to get started</h3><p>Install the Yo Generator</p>
+<pre><code>npm install generator-wikismith
+</code></pre><p>Create your project</p>
+<pre><code>mkdir my-awesome-site
+cd my-awesome-site
+yo wikismith
+</code></pre><p>Start the server</p>
+<pre><code>gulp
+</code></pre></div><!-- h3 --><div class='col-sm-4'><h3 id="md-you-39-re-new-to-npm-yo-and-gulp">You&#39;re new to NPM, Yo, and Gulp</h3><p><strong>First</strong> welcome to a great tool-chain.  These
+ tools are making developers lives more fun and easy.</p>
+<p>Please checkout these articles:</p>
+<ul>
+<li><p><a href='/introduction_to_node_and_npm/index.html'>Introduction to Node and NPM</a></p>
+</li>
+<li><p><a href='/introduction_to_yo_gulp_and_bower/index.html'>Introduction to Yo, Gulp, and Bower</a></p>
+</li>
+<li><p><a href='/installing_node_and_npm/index.html'>Installing Node and NPM</a></p>
+</li>
+</ul>
+<p>And then your ready to get started.</p>
+</div></div><!-- h1 --><h1 class="page-header" id="md-get-started-with-help">Get Started with Help</h1><p><a href='/lorem_ipsum/index.html'>Lorem ipsum</a> dolor sit amet, consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
 Ut magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper sagittis elit, eget
 tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper diam tristique
 vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
@@ -130,13 +147,13 @@ tincidunt mi lobortis sollicitudin. Aliquam pretium est dui, eget ullamcorper di
 vulputate. Sed lobortis, purus sit amet condimentum rhoncus, eros nunc cursus mauris, vel lacinia
 neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum faucibus nisi.</p>
 <pre><code class="lang-javascript">    wikismith.watch_modules()
-        .<span class="hljs-keyword">pipe</span>(wikismith.build_module_assets())
-        .<span class="hljs-keyword">pipe</span>(wikismith.module_pages())
-        .<span class="hljs-keyword">pipe</span>(wikismith.render_page())
-        .<span class="hljs-keyword">pipe</span>(wikismith.wiki())
-        .<span class="hljs-keyword">pipe</span>(wikismith.unfolder_index())
-        .<span class="hljs-keyword">pipe</span>(gulp.dest(<span class="hljs-string">'build'</span>))
-        .<span class="hljs-keyword">pipe</span>(es.<span class="hljs-keyword">map</span>(function(file, cb) {
+        .pipe(wikismith.build_module_assets())
+        .pipe(wikismith.module_pages())
+        .pipe(wikismith.render_page())
+        .pipe(wikismith.wiki())
+        .pipe(wikismith.unfolder_index())
+        .pipe(gulp.dest(&#39;build&#39;))
+        .pipe(es.map(function(file, cb) {
             lr.changed({body: { files: [file.path] }});
             cb(null, file);
         }))
@@ -204,13 +221,63 @@ neque neque et eros. Vestibulum mauris purus, pharetra in felis mollis, bibendum
             
             
             
-            <li><a href="#md-barcamp-rules">Barcamp Rules</a></li>
+            <li><a href="#md-static-site-authoring-that-doesn-t-hurt">Static site authoring that doesn&#39;t hurt</a></li>
             
             
             
             
             
-            <li><a href="#md-lorem-ipsum">Lorem Ipsum</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="#md-get-started-with-help">Get Started with Help</a></li>
             
             
             
