@@ -99,35 +99,38 @@
 
 <div class="row">
 <div class="col-md-9" role="main">
-<p>Wikismith is the static site generator for Node.js, Gulp, and Bower</p>
-<!-- h3 --><div class='row'><div class='col-sm-4'><h3 id="md-get-familiar">Get Familiar</h3><video id="a240e92d" class="sublime" poster="https://cdn.sublimevideo.net/vpa/ms_800.jpg" width="100%" title="Midnight Sun" data-uid="a240e92d" preload="none">
+<!-- h3 --><div class='row'><div class='col-sm-6'><h3 id="md-get-familiar">Get Familiar</h3><video id="a240e92d" class="sublime" poster="https://cdn.sublimevideo.net/vpa/ms_800.jpg" width="100%" title="Midnight Sun" data-uid="a240e92d" preload="none">
   <source src="https://cdn.sublimevideo.net/vpa/ms_360p.mp4" />
   <source src="https://cdn.sublimevideo.net/vpa/ms_720p.mp4" data-quality="hd" />
   <source src="https://cdn.sublimevideo.net/vpa/ms_360p.webm" />
   <source src="https://cdn.sublimevideo.net/vpa/ms_720p.webm" data-quality="hd" />
 </video>
 
-</div><!-- h3 --><div class='col-sm-4'><h3 id="md-get-started">Get Started</h3><pre><code>npm install generator-wikismith
+</div><!-- h3 --><div class='col-sm-6'><h3 id="md-get-started">Get Started</h3><p>Use our yo based generator to get started.</p>
+<pre><code>npm install generator-wikismith
 </code></pre><pre><code>mkdir my-awesome-site
 cd my-awesome-site
 yo wikismith
-</code></pre><pre><code>gulp
-</code></pre></div><!-- h3 --><div class='col-sm-4'><h3 id="md-get-help">Get Help</h3><p>If Node, NPM, Yo, Gulp, and Bower are
-foreign words; please check out these
-articles:</p>
+</code></pre><p>Done!  Now start you server :)</p>
+<pre><code>gulp
+</code></pre></div></div><!-- h1 --><h1 class="page-header" id="md-overview">Overview</h1><p>Wikismith is composed of <strong>Pages</strong>, <strong>Themes</strong>, and a <strong>Project Gulpfile</strong>.</p>
+<p>By default the project gulpfile performs the following tasks:</p>
 <ul>
-<li><p><a href='/introduction_to_node_and_npm/index.html'>Introduction to Node and NPM</a></p>
+<li><p>Watches for changes to pages</p>
 </li>
-<li><p><a href='/introduction_to_yo_gulp_and_bower/index.html'>Introduction to Yo, Gulp, and Bower</a></p>
+<li><p>Rebuilds pages on change</p>
 </li>
-<li><p><a href='/installing_node_and_npm/index.html'>Installing Node and NPM</a></p>
+<li><p>Watches for changes to themes</p>
+</li>
+<li><p>Runs theme&#39;s tasks on change</p>
+</li>
+<li><p>Live-Reloads the browser as needed :)</p>
+</li>
+<li><p>Creates new pages based on Wiki Syntax</p>
 </li>
 </ul>
-</div></div><!-- h2 --><h2 id="md-wikismith-features">Wikismith Features</h2><!-- h4 --><h4 id="md-convert-wiki-pages-into-site-pages">Convert wiki pages into site pages</h4><p>A Wikismith project uses <strong>gulp</strong> to convert <strong>pages</strong> using <strong>wikismith themes</strong>.</p>
-<!-- h4 --><h4 id="md-create-new-pages-based-on-wiki-syntax">Create new pages based on Wiki Syntax</h4><p>Wikismith identifies text in double brackets and</p>
-<!-- h2 --><h2 id="md-wiki-pages">Wiki Pages</h2><p>A wiki page is a simple text file composed for front-matter and markdown.
-The front-matter specifies meta information and selects the <strong>theme</strong>
-wikismith will use to render the page.</p>
+<!-- h1 --><h1 class="page-header" id="md-pages">Pages</h1><p>A wiki page is a simple text file composed of front-matter and markdown.
+Along with other variables, the front-matter specifies the theme.</p>
 <!-- h4 --><h4 id="md-front-matter">Front Matter</h4><pre><code class="lang-yaml">---
 title: Congratulations!
 subtitle: You have successfully setup your Wikismith project.
@@ -136,22 +139,200 @@ author: Jeffrey R. Hicks
 theme: bs3
 ---
 </code></pre>
-<!-- h4 --><h4 id="md-markdown">Markdown</h4><pre><code class="lang-markdown"># Getting Started
+<!-- h4 --><h4 id="md-markdown">Markdown</h4><pre><code class="lang-markdown">A First Level Header
+====================
 
-Nam dictum sapien a velit rhoncus condimentum. orem ipsum dolor sit amet,
-consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper
-sagittis elit, eget tincidunt
+A Second Level Header
+---------------------
 
-#Lorem Ipsum
+Now is the time for all good men to come to
+the aid of their country. This is just a
+regular paragraph.
 
-Nam dictum sapien a velit rhoncus condimentum. orem ipsum dolor sit amet,
-consectetur adipiscing elit. Duis suscipit risus nec lacinia pharetra.
-magna diam, varius eu elementum vel, suscipit a magna. Nulla ullamcorper
-sagittis elit, eget tincidunt
+The quick brown fox jumped over the lazy
+dog&#39;s back.
+
+### Header 3
+
+&gt; This is a blockquote.
+&gt;
+&gt; This is the second paragraph in the blockquote.
 </code></pre>
-<p>Below the front matter</p>
-<!-- h2 --><h2 id="md-themes">Themes</h2><!-- h2 --><h2 id="md-gulpfile">Gulpfile</h2><pre><code class="lang-javascript">var app = express();
+<!-- h1 --><h1 class="page-header" id="md-themes">Themes</h1><p>Wikismith themes are autonomous and agnostic applications and usually include the following:</p>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>File</th>
+<th>Responsible for:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>package.json</td>
+<td>Specifying theme&#39;s node.js dependencies</td>
+</tr>
+<tr>
+<td>bower.js</td>
+<td>Specifying theme&#39;s front-end dependencies</td>
+</tr>
+<tr>
+<td>gulpfile.js</td>
+<td>Building theme&#39;s assets and such</td>
+</tr>
+<tr>
+<td>index.js</td>
+<td>Converting page markdown into HTML</td>
+</tr>
+</tbody>
+</table>
+<p>Wikismith themes are completely front-end and back-end agnostic.  They are free to use
+any templating language and you can utilize and any node package.</p>
+<!-- h2 --><h2 id="md-theme-package-json">Theme Package.json</h2><p>The theme&#39;s package.json has the dependencies needed for the themes Gulfile.js and index.js.</p>
+<!-- h4 --><h4 id="md-example">Example</h4><pre><code class="lang-json">{
+  &quot;name&quot;: &quot;wikismith-theme-custom&quot;,
+  &quot;version&quot;: &quot;0.0.3&quot;,
+  &quot;description&quot;: &quot;Custom wikismith theme.&quot;,
+  &quot;main&quot;: &quot;index.js&quot;,
+  &quot;author&quot;: &quot;Jeffrey Hicks&quot;,
+  &quot;license&quot;: &quot;MIT&quot;,
+  &quot;dependencies&quot;: {
+    &quot;ejs&quot;: &quot;^1.0.0&quot;,
+    &quot;event-stream&quot;: &quot;^3.1.7&quot;,
+    &quot;gulp-inject&quot;: &quot;^1.0.0&quot;,
+    &quot;gulp-util&quot;: &quot;^3.0.0&quot;,
+    &quot;highlight.js&quot;: &quot;^8.1.0&quot;,
+    &quot;marked&quot;: &quot;^0.3.2&quot;,
+    &quot;wiredep&quot;: &quot;^1.8.2&quot;,
+    &quot;xregexp&quot;: &quot;^2.0.0&quot;
+  }
+}
+</code></pre>
+<!-- h2 --><h2 id="md-theme-bower-json">Theme Bower.json</h2><p>This example bower.json simply specifies bootstrap as a dependency.</p>
+<!-- h4 --><h4 id="md-example">Example</h4><pre><code class="lang-json">{
+  &quot;name&quot;: &quot;Wikismith-theme-custom&quot;,
+  &quot;version&quot;: &quot;0.0.1&quot;,
+  &quot;authors&quot;: [
+    &quot;jrhicks@gmail.com&quot;
+  ],
+  &quot;description&quot;: &quot;Theme&quot;,
+  &quot;moduleType&quot;: [
+    &quot;node&quot;
+  ],
+  &quot;license&quot;: &quot;MIT&quot;,
+  &quot;homepage&quot;: &quot;wikismith.com&quot;,
+  &quot;private&quot;: true,
+  &quot;dependencies&quot;: {
+    &quot;bootstrap&quot;: &quot;~3.2.0&quot;
+  }
+}
+</code></pre>
+<!-- h2 --><h2 id="md-theme-gulpfile-js">Theme Gulpfile.js</h2><p>A theme gulpfile is very similar to any project&#39;s gulpfile except with 3 notable differences:</p>
+<ol>
+<li><p>It exports a build method</p>
+</li>
+<li><p>It follows the convention of building assets relative to the process current working directory (cwd)</p>
+</li>
+<li><p>It follows the convention of placing assets in a subfolder of build</p>
+</li>
+</ol>
+<p>By exporting the build method, wikismith can plug into the theme and pipe more effeciently.
+By following the convention of placing assets in cwd/build/theme_name we match the project&#39;s
+ expectations and avoid collision.</p>
+<p>This example Gulpfile.js collects the application and bower assets, moves them to their
+ destination and links them into template.html with inject.</p>
+<!-- h4 --><h4 id="md-example">Example</h4><pre><code class="lang-javascript">var gulp = require(&#39;gulp&#39;);
+var gutil = require(&#39;gulp-util&#39;);
+var inject = require(&quot;gulp-inject&quot;);
+var es = require(&#39;event-stream&#39;);
+var wiredep = require(&#39;wiredep&#39;);
+var path = require(&#39;path&#39;);
+var fs = require(&quot;fs&quot;);
+
+gulp.task(&#39;default&#39;, function(cb) {
+    build(cb);
+});
+
+function build(cb) {
+    var fsrc = __dirname;
+    var fdst = path.join(process.cwd(), &#39;build&#39;, &#39;wsmith&#39;);
+    var bower_options = {
+        directory:  path.join(fsrc, &#39;bower_components&#39;),
+        bowerJson:  require(path.join(fsrc, &#39;bower.json&#39;))
+    }
+    var bower_js = wiredep(bower_options).js || &#39;undefined&#39;;
+    var bower_css = wiredep(bower_options).css || &#39;undefined&#39;;
+    var bower_assets = es.merge(
+        gulp.src(bower_js).pipe(gulp.dest(path.join(fdst,&#39;bower&#39;,&#39;js&#39;))),
+        gulp.src(bower_css).pipe(gulp.dest(path.join(fdst,&#39;bower&#39;,&#39;css&#39;)))
+    );
+    var app_assets = es.merge(
+        gulp.src([fsrc+&#39;/js/**/*.js&#39;]).pipe(gulp.dest(path.join(fdst,&#39;js&#39;))),
+        gulp.src([fsrc+&#39;/css/**/*.css&#39;]).pipe(gulp.dest(path.join(fdst,&#39;css&#39;)))
+    );
+    var s1 = gulp.src(path.join(__dirname, &#39;template.html&#39;))
+        .pipe(inject(es.merge(bower_assets),
+            {
+                ignorePath: &#39;/build/&#39;,
+                starttag: &#39;&lt;!-- bower:{{ext}} --&gt;&#39;
+            }))
+        .pipe(inject(es.merge(app_assets),
+            {
+                ignorePath: &#39;/build/&#39;
+            }))
+        .pipe(gulp.dest(path.join(__dirname)))
+
+    var s2 = gulp.src(path.join(__dirname,&#39;img&#39;,&#39;**&#39;,&#39;*&#39;))
+        .pipe(gulp.dest(path.join(fdst,&#39;img&#39;)))
+
+    es.merge(s1,s2)
+        .on(&#39;end&#39;, function() {
+            cb()
+        });
+}
+
+module.exports = build;
+</code></pre>
+<!-- h2 --><h2 id="md-theme-index-js">Theme Index.js</h2><p>The index.js exports a function that can receive a file object and
+return a string representing the HTML of the final rendered page.</p>
+<p>This example index.js customizes the markdown output for bootstrap,
+performs a neat transformation causing h3 blocks to column up in row.
+It also parses the markdown to give data to the EJS template to
+assist with creating an index.</p>
+<!-- h4 --><h4 id="md-example">Example</h4><pre><code class="lang-javascript">var marked = require(&#39;marked&#39;);
+var highlight = require(&#39;highlight.js&#39;);
+var ejs = require(&#39;ejs&#39;);
+var path = require(&#39;path&#39;);
+var fs = require(&quot;fs&quot;);
+
+var renderer = new marked.Renderer();
+
+function customizeMarked() {
+    // omitted for brevity
+}
+
+function rowify_h3s(html) {
+    // omitted for brevity
+}
+
+function render(file) {
+    var template = String(fs.readFileSync(path.join(__dirname, &#39;template.html&#39;)));
+
+    var h = marked(file.body);;
+    var h2 = rowify_h3s(h);
+
+    return ejs.render(template, {
+        params: file.params,
+        content: h2,
+        ast: marked.lexer(file.body)
+    });
+}
+
+customizeMarked()
+module.exports = render;
+</code></pre>
+<!-- h1 --><h1 class="page-header" id="md-project-gulpfile">Project Gulpfile</h1><p>This is the gulpfile.js that comes from the yo generator.  It starts a local server on port 9292,
+rebuilds pages and themes on change, and live-reloads the browser.</p>
+<!-- h4 --><h4 id="md-example">Example</h4><pre><code class="lang-javascript">var app = express();
 var lr = tinylr();
 
 function serve() {
@@ -173,7 +354,7 @@ gulp.task(&#39;default&#39;, function() {
     serve()
 });
 </code></pre>
-<!-- h2 --><h2 id="md-philosophy">Philosophy</h2><!-- h4 --><h4 id="md-few-plugins">Few Plugins</h4><!-- h4 --><h4 id="md-no-cli">No CLI</h4><!-- h4 --><h4 id="md-bower">Bower</h4><!-- end -->
+<!-- end -->
 </div>
 
 <div class="col-md-3">
@@ -198,6 +379,7 @@ gulp.task(&#39;default&#39;, function() {
             
             
             
+            <li><a href="#md-overview">Overview</a></li>
             
             
             
@@ -224,7 +406,6 @@ gulp.task(&#39;default&#39;, function() {
             
             
             
-            <li><a href="#md-wikismith-features">Wikismith Features</a></li>
             
             
             
@@ -236,9 +417,19 @@ gulp.task(&#39;default&#39;, function() {
             
             
             
-            <li><a href="#md-wiki-pages">Wiki Pages</a></li>
             
             
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="#md-pages">Pages</a></li>
             
             
             
@@ -256,13 +447,83 @@ gulp.task(&#39;default&#39;, function() {
             
             
             
-            <li><a href="#md-gulpfile">Gulpfile</a></li>
             
             
             
             
             
-            <li><a href="#md-philosophy">Philosophy</a></li>
+            
+            <li><a href="#md-theme-package-json">Theme Package.json</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="#md-theme-bower-json">Theme Bower.json</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="#md-theme-gulpfile-js">Theme Gulpfile.js</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="#md-theme-index-js">Theme Index.js</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a href="#md-project-gulpfile">Project Gulpfile</a></li>
             
             
             
@@ -287,31 +548,8 @@ gulp.task(&#39;default&#39;, function() {
 ================================================== -->
 <footer class="bs-docs-footer" role="contentinfo">
     <div class="container">
-
-
-
-        <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
-        <p>Maintained by the <a href="https://github.com/twbs?tab=members">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
-        <p>Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        <ul class="bs-docs-footer-links muted">
-            <li>Currently v3.2.0</li>
-            <li>&middot;</li>
-            <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
-            <li>&middot;</li>
-            <li><a href="../getting-started/#examples">Examples</a></li>
-            <li>&middot;</li>
-            <li><a href="../2.3.2/">v2.3.2 docs</a></li>
-            <li>&middot;</li>
-            <li><a href="../about/">About</a></li>
-            <li>&middot;</li>
-            <li><a href="http://expo.getbootstrap.com">Expo</a></li>
-            <li>&middot;</li>
-            <li><a href="http://blog.getbootstrap.com">Blog</a></li>
-            <li>&middot;</li>
-            <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
-            <li>&middot;</li>
-            <li><a href="https://github.com/twbs/bootstrap/releases">Releases</a></li>
-        </ul>
+        <p>Bootstrap Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a></p>
+        <p>Wikismith Logo and Desk art is solely licensed for use on this page.</p>
     </div>
 </footer>
 
@@ -325,31 +563,6 @@ gulp.task(&#39;default&#39;, function() {
 <!-- endinject -->
 
 
-
-
-<script>
-    window.twttr = (function (d,s,id) {
-        var t, js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return; js=d.createElement(s); js.id=id; js.async=1;
-        js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
-        return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
-    }(document, "script", "twitter-wjs"));
-</script>
-
-<!-- Analytics
-================================================== -->
-<script>
-    var _gauges = _gauges || [];
-    (function() {
-        var t   = document.createElement('script');
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-    })();
-</script>
 
 </body>
 </html>
