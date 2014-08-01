@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
-    <meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-
     <title>
-
-        Getting started &middot; Bootstrap
-
+     Wikismith - Streaming Static Site Generator for fans of Gulp and Bower
     </title>
 
+    <script type="text/javascript" src="//cdn.sublimevideo.net/js/sgscg0y1.js"></script>
+
+    <meta name="viewport" content="width=device-width">
+
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab" rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Roboto" rel='stylesheet' type='text/css'>
+
     <!-- bower:css -->
-    <link rel="stylesheet" href="/bs3/bower/css/bootstrap.css">
+    <link rel="stylesheet" href="/wsmith/bower/css/bootstrap.css">
     <!-- endinject -->
 
     <!-- inject:css -->
-    <link rel="stylesheet" href="/bs3/css/blog.css">
-    <link rel="stylesheet" href="/bs3/css/docs.min.css">
-    <link rel="stylesheet" href="/bs3/css/railscasts.css">
+    <link rel="stylesheet" href="/wsmith/css/docs.min.css">
+    <link rel="stylesheet" href="/wsmith/css/github.css">
+    <link rel="stylesheet" href="/wsmith/css/wsmith.css">
     <!-- endinject -->
+
 
     <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -49,13 +47,17 @@
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
         <div class="navbar-header">
+
+            <img src="/wsmith/img/wikismith_200px.png">
+
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="../../../" class="navbar-brand">Wikismith</a>
+            
+            <a href="/" class="navbar-brand">WIKISMITH</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <!--
@@ -82,10 +84,17 @@
 
 <!-- Docs page layout -->
 <div class="bs-docs-header" id="content">
+
     <div class="container">
-        <h1>The Streaming Static Site Generator</h1>
-        <p></p>
+        <div class="row">
+            <div class="col-md-12">
+                <h1>The Streaming Static Site Generator</h1>
+                <p></p>
+                <img src="/wsmith/img/wikismith_desk.png">
+            </div>
+        </div>
     </div>
+
 </div>
 
 <div class="container bs-docs-container">
@@ -93,12 +102,12 @@
 <div class="row">
 <div class="col-md-9" role="main">
 <!-- h2 --><h2 id="md-get-started">Get Started</h2><p>Get the Pre-Reqs</p>
-<pre><code>npm install gulp -g
-npm install yo -g
-npm install generator-wikismith
+<pre><code>npm <span class="hljs-operator"><span class="hljs-keyword">install</span> gulp -g
+npm <span class="hljs-keyword">install</span> yo -g
+npm <span class="hljs-keyword">install</span> generator-wikismith</span>
 </code></pre><p>Do it!</p>
-<pre><code>mkdir my-awesome-site
-cd my-awesome-site
+<pre><code><span class="hljs-keyword">mkdir</span> <span class="hljs-keyword">my</span>-awesome-site
+cd <span class="hljs-keyword">my</span>-awesome-site
 yo wikismith
 </code></pre><p>Go!</p>
 <pre><code>gulp
@@ -124,26 +133,26 @@ yo wikismith
 </ul>
 <!-- h1 --><h1 class="page-header" id="md-pages">Pages</h1><p>A wiki page is a simple text file composed of front-matter and markdown.
 Along with other variables, the front-matter specifies the theme.</p>
-<!-- h4 --><h4 id="md-front-matter">Front Matter</h4><pre><code class="lang-yaml">---
-title: Congratulations!
+<!-- h4 --><h4 id="md-front-matter">Front Matter</h4><pre><code class="lang-yaml"><span class="hljs-bullet">---
+</span>title: Congratulations!
 subtitle: You have successfully setup your Wikismith project.
 created: 2014/06/29 16:40 CST
 author: Jeffrey R. Hicks
-theme: bs3
----
+<span class="hljs-header">theme: bs3
+---</span>
 </code></pre>
-<!-- h4 --><h4 id="md-markdown">Markdown</h4><pre><code class="lang-markdown">A First Level Header
-====================
+<!-- h4 --><h4 id="md-markdown">Markdown</h4><pre><code class="lang-markdown"><span class="hljs-header">A First Level Header
+====================</span>
 
-A Second Level Header
----------------------
+<span class="hljs-header">A Second Level Header
+---------------------</span>
 
 Now is the time for all good men to come to
 the aid of their country. This is just a
 regular paragraph.
 
 The quick brown fox jumped over the lazy
-dog&#39;s back.
+dog's back.
 
 ### Header 3
 
@@ -156,7 +165,7 @@ dog&#39;s back.
 task runner to scaffold a new page and transform the bracketed text into a
 hyperlink.</p>
 <!-- h1 --><h1 class="page-header" id="md-themes">Themes</h1><p>Wikismith themes are autonomous and agnostic applications and usually include the following:</p>
-<table>
+<table class="table table-striped">
 <thead>
 <tr>
 <th>File</th>
@@ -186,42 +195,42 @@ hyperlink.</p>
 any templating language and you can utilize and any node package.</p>
 <!-- h2 --><h2 id="md-theme-package-json">Theme Package.json</h2><p>The theme&#39;s package.json has the dependencies needed for the themes Gulfile.js and index.js.</p>
 <!-- h4 --><h4 id="md-example">Example</h4><pre><code class="lang-json">{
-  &quot;name&quot;: &quot;wikismith-theme-custom&quot;,
-  &quot;version&quot;: &quot;0.0.3&quot;,
-  &quot;description&quot;: &quot;Custom wikismith theme.&quot;,
-  &quot;main&quot;: &quot;index.js&quot;,
-  &quot;author&quot;: &quot;Jeffrey Hicks&quot;,
-  &quot;license&quot;: &quot;MIT&quot;,
-  &quot;dependencies&quot;: {
-    &quot;ejs&quot;: &quot;^1.0.0&quot;,
-    &quot;event-stream&quot;: &quot;^3.1.7&quot;,
-    &quot;gulp-inject&quot;: &quot;^1.0.0&quot;,
-    &quot;gulp-util&quot;: &quot;^3.0.0&quot;,
-    &quot;highlight.js&quot;: &quot;^8.1.0&quot;,
-    &quot;marked&quot;: &quot;^0.3.2&quot;,
-    &quot;wiredep&quot;: &quot;^1.8.2&quot;,
-    &quot;xregexp&quot;: &quot;^2.0.0&quot;
-  }
-}
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"wikismith-theme-custom"</span></span>,
+  "<span class="hljs-attribute">version</span>": <span class="hljs-value"><span class="hljs-string">"0.0.3"</span></span>,
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Custom wikismith theme."</span></span>,
+  "<span class="hljs-attribute">main</span>": <span class="hljs-value"><span class="hljs-string">"index.js"</span></span>,
+  "<span class="hljs-attribute">author</span>": <span class="hljs-value"><span class="hljs-string">"Jeffrey Hicks"</span></span>,
+  "<span class="hljs-attribute">license</span>": <span class="hljs-value"><span class="hljs-string">"MIT"</span></span>,
+  "<span class="hljs-attribute">dependencies</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">ejs</span>": <span class="hljs-value"><span class="hljs-string">"^1.0.0"</span></span>,
+    "<span class="hljs-attribute">event-stream</span>": <span class="hljs-value"><span class="hljs-string">"^3.1.7"</span></span>,
+    "<span class="hljs-attribute">gulp-inject</span>": <span class="hljs-value"><span class="hljs-string">"^1.0.0"</span></span>,
+    "<span class="hljs-attribute">gulp-util</span>": <span class="hljs-value"><span class="hljs-string">"^3.0.0"</span></span>,
+    "<span class="hljs-attribute">highlight.js</span>": <span class="hljs-value"><span class="hljs-string">"^8.1.0"</span></span>,
+    "<span class="hljs-attribute">marked</span>": <span class="hljs-value"><span class="hljs-string">"^0.3.2"</span></span>,
+    "<span class="hljs-attribute">wiredep</span>": <span class="hljs-value"><span class="hljs-string">"^1.8.2"</span></span>,
+    "<span class="hljs-attribute">xregexp</span>": <span class="hljs-value"><span class="hljs-string">"^2.0.0"</span>
+  </span>}
+</span>}
 </code></pre>
 <!-- h2 --><h2 id="md-theme-bower-json">Theme Bower.json</h2><p>This example bower.json simply specifies bootstrap as a dependency.</p>
 <!-- h4 --><h4 id="md-example">Example</h4><pre><code class="lang-json">{
-  &quot;name&quot;: &quot;Wikismith-theme-custom&quot;,
-  &quot;version&quot;: &quot;0.0.1&quot;,
-  &quot;authors&quot;: [
-    &quot;jrhicks@gmail.com&quot;
-  ],
-  &quot;description&quot;: &quot;Theme&quot;,
-  &quot;moduleType&quot;: [
-    &quot;node&quot;
-  ],
-  &quot;license&quot;: &quot;MIT&quot;,
-  &quot;homepage&quot;: &quot;wikismith.com&quot;,
-  &quot;private&quot;: true,
-  &quot;dependencies&quot;: {
-    &quot;bootstrap&quot;: &quot;~3.2.0&quot;
-  }
-}
+  "<span class="hljs-attribute">name</span>": <span class="hljs-value"><span class="hljs-string">"Wikismith-theme-custom"</span></span>,
+  "<span class="hljs-attribute">version</span>": <span class="hljs-value"><span class="hljs-string">"0.0.1"</span></span>,
+  "<span class="hljs-attribute">authors</span>": <span class="hljs-value">[
+    <span class="hljs-string">"jrhicks@gmail.com"</span>
+  ]</span>,
+  "<span class="hljs-attribute">description</span>": <span class="hljs-value"><span class="hljs-string">"Theme"</span></span>,
+  "<span class="hljs-attribute">moduleType</span>": <span class="hljs-value">[
+    <span class="hljs-string">"node"</span>
+  ]</span>,
+  "<span class="hljs-attribute">license</span>": <span class="hljs-value"><span class="hljs-string">"MIT"</span></span>,
+  "<span class="hljs-attribute">homepage</span>": <span class="hljs-value"><span class="hljs-string">"wikismith.com"</span></span>,
+  "<span class="hljs-attribute">private</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+  "<span class="hljs-attribute">dependencies</span>": <span class="hljs-value">{
+    "<span class="hljs-attribute">bootstrap</span>": <span class="hljs-value"><span class="hljs-string">"~3.2.0"</span>
+  </span>}
+</span>}
 </code></pre>
 <!-- h2 --><h2 id="md-theme-gulpfile-js">Theme Gulpfile.js</h2><p>A theme gulpfile is very similar to any project&#39;s gulpfile except with 3 notable differences:</p>
 <ol>
@@ -237,57 +246,57 @@ By following the convention of placing assets in cwd/build/theme_name we match t
  expectations and avoid collision.</p>
 <p>This example Gulpfile.js collects the application and bower assets, moves them to their
  destination and links them into template.html with inject.</p>
-<!-- h4 --><h4 id="md-example">Example</h4><pre><code class="lang-javascript">var gulp = require(&#39;gulp&#39;);
-var gutil = require(&#39;gulp-util&#39;);
-var inject = require(&quot;gulp-inject&quot;);
-var es = require(&#39;event-stream&#39;);
-var wiredep = require(&#39;wiredep&#39;);
-var path = require(&#39;path&#39;);
-var fs = require(&quot;fs&quot;);
+<!-- h4 --><h4 id="md-example">Example</h4><pre><code class="lang-javascript"><span class="hljs-keyword">var</span> gulp = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gulp'</span>);
+<span class="hljs-keyword">var</span> gutil = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gulp-util'</span>);
+<span class="hljs-keyword">var</span> inject = <span class="hljs-built_in">require</span>(<span class="hljs-string">"gulp-inject"</span>);
+<span class="hljs-keyword">var</span> es = <span class="hljs-built_in">require</span>(<span class="hljs-string">'event-stream'</span>);
+<span class="hljs-keyword">var</span> wiredep = <span class="hljs-built_in">require</span>(<span class="hljs-string">'wiredep'</span>);
+<span class="hljs-keyword">var</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+<span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">"fs"</span>);
 
-gulp.task(&#39;default&#39;, function(cb) {
+gulp.task(<span class="hljs-string">'default'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(cb)</span> </span>{
     build(cb);
 });
 
-function build(cb) {
-    var fsrc = __dirname;
-    var fdst = path.join(process.cwd(), &#39;build&#39;, &#39;wsmith&#39;);
-    var bower_options = {
-        directory:  path.join(fsrc, &#39;bower_components&#39;),
-        bowerJson:  require(path.join(fsrc, &#39;bower.json&#39;))
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">build</span><span class="hljs-params">(cb)</span> </span>{
+    <span class="hljs-keyword">var</span> fsrc = __dirname;
+    <span class="hljs-keyword">var</span> fdst = path.join(process.cwd(), <span class="hljs-string">'build'</span>, <span class="hljs-string">'wsmith'</span>);
+    <span class="hljs-keyword">var</span> bower_options = {
+        directory:  path.join(fsrc, <span class="hljs-string">'bower_components'</span>),
+        bowerJson:  <span class="hljs-built_in">require</span>(path.join(fsrc, <span class="hljs-string">'bower.json'</span>))
     }
-    var bower_js = wiredep(bower_options).js || &#39;undefined&#39;;
-    var bower_css = wiredep(bower_options).css || &#39;undefined&#39;;
-    var bower_assets = es.merge(
-        gulp.src(bower_js).pipe(gulp.dest(path.join(fdst,&#39;bower&#39;,&#39;js&#39;))),
-        gulp.src(bower_css).pipe(gulp.dest(path.join(fdst,&#39;bower&#39;,&#39;css&#39;)))
+    <span class="hljs-keyword">var</span> bower_js = wiredep(bower_options).js || <span class="hljs-string">'undefined'</span>;
+    <span class="hljs-keyword">var</span> bower_css = wiredep(bower_options).css || <span class="hljs-string">'undefined'</span>;
+    <span class="hljs-keyword">var</span> bower_assets = es.merge(
+        gulp.src(bower_js).pipe(gulp.dest(path.join(fdst,<span class="hljs-string">'bower'</span>,<span class="hljs-string">'js'</span>))),
+        gulp.src(bower_css).pipe(gulp.dest(path.join(fdst,<span class="hljs-string">'bower'</span>,<span class="hljs-string">'css'</span>)))
     );
-    var app_assets = es.merge(
-        gulp.src([fsrc+&#39;/js/**/*.js&#39;]).pipe(gulp.dest(path.join(fdst,&#39;js&#39;))),
-        gulp.src([fsrc+&#39;/css/**/*.css&#39;]).pipe(gulp.dest(path.join(fdst,&#39;css&#39;)))
+    <span class="hljs-keyword">var</span> app_assets = es.merge(
+        gulp.src([fsrc+<span class="hljs-string">'/js/**/*.js'</span>]).pipe(gulp.dest(path.join(fdst,<span class="hljs-string">'js'</span>))),
+        gulp.src([fsrc+<span class="hljs-string">'/css/**/*.css'</span>]).pipe(gulp.dest(path.join(fdst,<span class="hljs-string">'css'</span>)))
     );
-    var s1 = gulp.src(path.join(__dirname, &#39;template.html&#39;))
+    <span class="hljs-keyword">var</span> s1 = gulp.src(path.join(__dirname, <span class="hljs-string">'template.html'</span>))
         .pipe(inject(es.merge(bower_assets),
             {
-                ignorePath: &#39;/build/&#39;,
-                starttag: &#39;&lt;!-- bower:{{ext}} --&gt;&#39;
+                ignorePath: <span class="hljs-string">'/build/'</span>,
+                starttag: <span class="hljs-string">'&lt;!-- bower:{{ext}} --&gt;'</span>
             }))
         .pipe(inject(es.merge(app_assets),
             {
-                ignorePath: &#39;/build/&#39;
+                ignorePath: <span class="hljs-string">'/build/'</span>
             }))
         .pipe(gulp.dest(path.join(__dirname)))
 
-    var s2 = gulp.src(path.join(__dirname,&#39;img&#39;,&#39;**&#39;,&#39;*&#39;))
-        .pipe(gulp.dest(path.join(fdst,&#39;img&#39;)))
+    <span class="hljs-keyword">var</span> s2 = gulp.src(path.join(__dirname,<span class="hljs-string">'img'</span>,<span class="hljs-string">'**'</span>,<span class="hljs-string">'*'</span>))
+        .pipe(gulp.dest(path.join(fdst,<span class="hljs-string">'img'</span>)))
 
     es.merge(s1,s2)
-        .on(&#39;end&#39;, function() {
+        .on(<span class="hljs-string">'end'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
             cb()
         });
 }
 
-module.exports = build;
+<span class="hljs-built_in">module</span>.exports = build;
 </code></pre>
 <!-- h2 --><h2 id="md-theme-index-js">Theme Index.js</h2><p>The index.js exports a function that can receive a file object and
 return a string representing the HTML of the final rendered page.</p>
@@ -295,29 +304,29 @@ return a string representing the HTML of the final rendered page.</p>
 performs a neat transformation causing h3 blocks to column up in row.
 It also parses the markdown to give data to the EJS template to
 assist with creating an index.</p>
-<!-- h4 --><h4 id="md-example">Example</h4><pre><code class="lang-javascript">var marked = require(&#39;marked&#39;);
-var highlight = require(&#39;highlight.js&#39;);
-var ejs = require(&#39;ejs&#39;);
-var path = require(&#39;path&#39;);
-var fs = require(&quot;fs&quot;);
+<!-- h4 --><h4 id="md-example">Example</h4><pre><code class="lang-javascript"><span class="hljs-keyword">var</span> marked = <span class="hljs-built_in">require</span>(<span class="hljs-string">'marked'</span>);
+<span class="hljs-keyword">var</span> highlight = <span class="hljs-built_in">require</span>(<span class="hljs-string">'highlight.js'</span>);
+<span class="hljs-keyword">var</span> ejs = <span class="hljs-built_in">require</span>(<span class="hljs-string">'ejs'</span>);
+<span class="hljs-keyword">var</span> path = <span class="hljs-built_in">require</span>(<span class="hljs-string">'path'</span>);
+<span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">"fs"</span>);
 
-var renderer = new marked.Renderer();
+<span class="hljs-keyword">var</span> renderer = <span class="hljs-keyword">new</span> marked.Renderer();
 
-function customizeMarked() {
-    // omitted for brevity
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">customizeMarked</span><span class="hljs-params">()</span> </span>{
+    <span class="hljs-comment">// omitted for brevity</span>
 }
 
-function rowify_h3s(html) {
-    // omitted for brevity
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">rowify_h3s</span><span class="hljs-params">(html)</span> </span>{
+    <span class="hljs-comment">// omitted for brevity</span>
 }
 
-function render(file) {
-    var template = String(fs.readFileSync(path.join(__dirname, &#39;template.html&#39;)));
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">render</span><span class="hljs-params">(file)</span> </span>{
+    <span class="hljs-keyword">var</span> template = <span class="hljs-built_in">String</span>(fs.readFileSync(path.join(__dirname, <span class="hljs-string">'template.html'</span>)));
 
-    var h = marked(file.body);;
-    var h2 = rowify_h3s(h);
+    <span class="hljs-keyword">var</span> h = marked(file.body);;
+    <span class="hljs-keyword">var</span> h2 = rowify_h3s(h);
 
-    return ejs.render(template, {
+    <span class="hljs-keyword">return</span> ejs.render(template, {
         params: file.params,
         content: h2,
         ast: marked.lexer(file.body)
@@ -325,29 +334,29 @@ function render(file) {
 }
 
 customizeMarked()
-module.exports = render;
+<span class="hljs-built_in">module</span>.exports = render;
 </code></pre>
 <!-- h1 --><h1 class="page-header" id="md-project-gulpfile">Project Gulpfile</h1><p>This is the gulpfile.js that comes from the yo generator.  It starts a local server on port 9292,
 rebuilds pages and themes on change, and live-reloads the browser.</p>
-<!-- h4 --><h4 id="md-example">Example</h4><pre><code class="lang-javascript">var app = express();
-var lr = tinylr();
+<!-- h4 --><h4 id="md-example">Example</h4><pre><code class="lang-javascript"><span class="hljs-keyword">var</span> app = express();
+<span class="hljs-keyword">var</span> lr = tinylr();
 
-function serve() {
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">serve</span><span class="hljs-params">()</span> </span>{
     wikismith.watch()
         .pipe(wikismith.pipeline())
-        .pipe(gulp.dest(&#39;build&#39;))
-        .pipe(es.map(function(file, cb) {
+        .pipe(gulp.dest(<span class="hljs-string">'build'</span>))
+        .pipe(es.map(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(file, cb)</span> </span>{
             lr.changed({body: { files: [file.path] }});
-            cb(null, file);
+            cb(<span class="hljs-keyword">null</span>, file);
         }));
 
-    app.use(livereload());
-    app.use(express.static(__dirname + &#39;/build&#39;));
-    app.listen(9292);
-    lr.listen(35729);
+    app.<span class="hljs-keyword">use</span>(livereload());
+    app.<span class="hljs-keyword">use</span>(express.<span class="hljs-keyword">static</span>(__dirname + <span class="hljs-string">'/build'</span>));
+    app.listen(<span class="hljs-number">9292</span>);
+    lr.listen(<span class="hljs-number">35729</span>);
 }
 
-gulp.task(&#39;default&#39;, function() {
+gulp.task(<span class="hljs-string">'default'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
     serve()
 });
 </code></pre>
@@ -557,68 +566,29 @@ gulp.task(&#39;default&#39;, function() {
 ================================================== -->
 <footer class="bs-docs-footer" role="contentinfo">
     <div class="container">
-
-
-
-        <p>Designed and built with all the love in the world by <a href="http://twitter.com/mdo" target="_blank">@mdo</a> and <a href="http://twitter.com/fat" target="_blank">@fat</a>.</p>
-        <p>Maintained by the <a href="https://github.com/twbs?tab=members">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
-        <p>Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
-        <ul class="bs-docs-footer-links muted">
-            <li>Currently v3.2.0</li>
-            <li>&middot;</li>
-            <li><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
-            <li>&middot;</li>
-            <li><a href="../getting-started/#examples">Examples</a></li>
-            <li>&middot;</li>
-            <li><a href="../2.3.2/">v2.3.2 docs</a></li>
-            <li>&middot;</li>
-            <li><a href="../about/">About</a></li>
-            <li>&middot;</li>
-            <li><a href="http://expo.getbootstrap.com">Expo</a></li>
-            <li>&middot;</li>
-            <li><a href="http://blog.getbootstrap.com">Blog</a></li>
-            <li>&middot;</li>
-            <li><a href="https://github.com/twbs/bootstrap/issues?state=open">Issues</a></li>
-            <li>&middot;</li>
-            <li><a href="https://github.com/twbs/bootstrap/releases">Releases</a></li>
-        </ul>
+        <p>Bootstrap Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a></p>
+        <p>Wikismith Logo and Desk art is solely licensed for use on this page.</p>
     </div>
 </footer>
 
 <!-- bower:js -->
-<script src="/bs3/bower/js/jquery.js"></script>
-<script src="/bs3/bower/js/bootstrap.js"></script>
+<script src="/wsmith/bower/js/jquery.js"></script>
+<script src="/wsmith/bower/js/bootstrap.js"></script>
 <!-- endinject -->
 
 <!-- inject:js -->
-<script src="/bs3/js/docs.min.js"></script>
+<script src="/wsmith/js/docs.min.js"></script>
 <!-- endinject -->
 
-
-
-
 <script>
-    window.twttr = (function (d,s,id) {
-        var t, js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return; js=d.createElement(s); js.id=id; js.async=1;
-        js.src="https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
-        return window.twttr || (t = { _e: [], ready: function(f){ t._e.push(f) } });
-    }(document, "script", "twitter-wjs"));
-</script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<!-- Analytics
-================================================== -->
-<script>
-    var _gauges = _gauges || [];
-    (function() {
-        var t   = document.createElement('script');
-        t.async = true;
-        t.id    = 'gauges-tracker';
-        t.setAttribute('data-site-id', '4f0dc9fef5a1f55508000013');
-        t.src = '//secure.gaug.es/track.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(t, s);
-    })();
+    ga('create', 'UA-53439609-1', 'auto');
+    ga('send', 'pageview');
+
 </script>
 
 </body>
