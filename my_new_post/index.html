@@ -82,8 +82,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Version 0.4.0 Introduces Blog Functionality</h1>
-                <p></p>
+                <h1>My New Awesome Post</h1>
+                <p>This is my new posts subtitle</p>
                 <img src="/wsmith/img/wikismith_desk.png">
             </div>
         </div>
@@ -95,57 +95,15 @@
 
 <div class="row">
 <div class="col-md-9" role="main">
-<!-- h2 --><h2 id="md-a-wiki-style-of-blogging">A Wiki-Style of Blogging</h2><p>Wikismith introduces a wiki-style of blogging that I think your going to love.
-Simply add tripple bracketed links to an index page.  Wikismith will recognize
-this tripple-brackets, generate a new page, and replace bracketed text with
-a <strong>page snippet</strong>.</p>
-<pre>
-&#091;&#091;&#091;Most Recent Entry&#093;&#093;&#093;
-
-&#091;&#091;&#091;Second Blog Entry&#093;&#093;&#093;
-
-&#091;&#091;&#091;First Blog Entry&#093;&#093;&#093;
-</pre>
-
-<p>Page snippets show the standard meta data you would expect from a blog index.  Typically the
-following information is formatted in a page snippet.</p>
-<ul>
-<li><p>Title</p>
-</li>
-<li><p>Created Date</p>
-</li>
-<li><p>Author</p>
-</li>
-<li><p>Excerpt</p>
-</li>
-</ul>
-<!-- h2 --><h2 id="md-formatters">Formatters</h2><p>Wikismith formats <strong>page snippets</strong> via formatters.  Below is an example formatter for page_snippets.</p>
-<!-- h4 --><h4 id="md-formatters-index-js">formatters/index.js</h4><pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ejs = require('ejs');
-<span class="hljs-keyword">var</span> fs = require('fs');
-<span class="hljs-keyword">var</span> path = require('path');
-
-function page_snippet(file) {
-    <span class="hljs-keyword">var</span> <span class="hljs-keyword">template</span> = <span class="hljs-type">String</span>(fs.readFileSync(path.join(__dirname, 'page_snippet.html')));
-
-    <span class="hljs-keyword">return</span> ejs.render(<span class="hljs-keyword">template</span>, {
-        url: file.url,
-        params: file.params
-    });
-}
-
-module.exports = {
-    page_snippet: page_snippet
-}
-</code></pre>
-<!-- h4 --><h4 id="md-formatters-page_snippet-html">formatters/page_snippet.html</h4><pre><code class="lang-ejs"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span><span class="vbscript">&lt;%=params.title%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span><span class="vbscript">&lt;%=params.created%&gt;</span> by <span class="vbscript">&lt;%=params.author%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="vbscript">&lt;%=params.excerpt%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"&lt;%=url%&gt;"</span>&gt;</span>Read More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre>
-<!-- h2 --><h2 id="md-roadmap">Roadmap</h2><p>In version 0.5, Wikismith will check the theme for overrides to default <strong>page snippet</strong> formatters.</p>
-<!-- end -->
+<!-- h2 --><h2 id="md-what-do-i-want-to-say">What do I want to say</h2><p>I want to say important things</p>
+<!-- h2 --><h2 id="md-subheading">Subheading</h2><p>This was a subheading</p>
+<!-- h3 --><div class='row'><div class='col-sm-6'><h3 id="md-simple">Simple</h3><p>aldjfa;lsdfkj asldfj alsd;kfj a;lsdfj as;ldfjas;ldfjasl;;dfjalsdfjk als;dfj al;sdfjkl
+aldjfa;lsdfkj asldfj alsd;kfj a;lsdfj as;ldfjas;ldfjasl;;dfjalsdfjk als;dfj al;sdfjkl
+aldjfa;lsdfkj asldfj alsd;kfj a;lsdfj as;ldfjas;ldfjasl;;dfjalsdfjk als;dfj al;sdfjkl</p>
+</div><!-- h3 --><div class='col-sm-6'><h3 id="md-smart">Smart</h3><p>aldfjal;skdfjalsdfj al;sdfj al;sdfj al;sdfj al;sdkfj asl;dfj asl;kdfj asl;kdfj
+aldjfa;lsdfkj asldfj alsd;kfj a;lsdfj as;ldfjas;ldfjasl;;dfjalsdfjk als;dfj al;sdfjkl
+aldjfa;lsdfkj asldfj alsd;kfj a;lsdfj as;ldfjas;ldfjasl;;dfjalsdfjk als;dfj al;sdfjkl</p>
+</div></div><!-- end -->
 </div>
 
 <div class="col-md-3">
@@ -154,7 +112,13 @@ module.exports = {
             
             
             
-            <li><a href="#md-a-wiki-style-of-blogging">A Wiki-Style of Blogging</a></li>
+            <li><a href="#md-what-do-i-want-to-say">What do I want to say</a></li>
+            
+            
+            
+            
+            
+            <li><a href="#md-subheading">Subheading</a></li>
             
             
             
@@ -163,52 +127,6 @@ module.exports = {
             
             
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li><a href="#md-formatters">Formatters</a></li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li><a href="#md-roadmap">Roadmap</a></li>
             
             
             
