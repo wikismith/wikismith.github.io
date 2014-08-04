@@ -83,7 +83,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="undefined">Version 0.4.0 Introduces Blog Functionality</h1>
+                <h1 class="undefined">Adding Posts With Index Entries</h1>
                 <p class="undefined"></p>
                 
             </div>
@@ -96,9 +96,11 @@
 
 <div class="row">
 <div class="col-md-9" role="main">
-<!-- h1 --><h1 class="page-header" id="md-a-wiki-style-of-blogging">A Wiki-Style of Blogging</h1><p>Add tripple bracketed links (known as <strong>index entries</strong>) and wikismith will generate a new page, and transform the bracketed text into a
-post summary befitting of a blog&#39;s index page.</p>
-<p>For example, the following <strong>index entries</strong>:</p>
+<!-- h1 --><h1 class="page-header" id="md-index-entries">Index Entries</h1><p>Index entries are the markdown fragments surrounded in triple brackets that
+provide the radically simplified <em>blogging</em> functionality in wikismith.  Wikismith uses them to auto-generate
+new posts and render a post preview
+that includes post title, meta information, excerpt, and permalink.</p>
+<p>Examples:</p>
 <pre>
 &#091;&#091;&#091;Most Recent Entry&#093;&#093;&#093;
 
@@ -107,7 +109,7 @@ post summary befitting of a blog&#39;s index page.</p>
 &#091;&#091;&#091;First Blog Entry&#093;&#093;&#093;
 </pre>
 
-<p>Would get transformed into:</p>
+<p>Examples Rendered:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span>Most Recent Entry<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span>2014/08/04 by J. Hicks<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
@@ -164,7 +166,7 @@ module.exports = {
             
             
             
-            <li><a href="#md-a-wiki-style-of-blogging">A Wiki-Style of Blogging</a></li>
+            <li><a href="#md-index-entries">Index Entries</a></li>
             
             
             
