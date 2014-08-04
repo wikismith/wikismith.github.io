@@ -17,6 +17,7 @@
     <!-- endinject -->
 
     <!-- inject:css -->
+    <link rel="stylesheet" href="/wsmith/css/blog.css">
     <link rel="stylesheet" href="/wsmith/css/docs.min.css">
     <link rel="stylesheet" href="/wsmith/css/github.css">
     <link rel="stylesheet" href="/wsmith/css/wsmith.css">
@@ -82,9 +83,9 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Version 0.4.0 Introduces Blog Functionality</h1>
-                <p></p>
-                <img src="/wsmith/img/wikismith_desk.png">
+                <h1 class="undefined">Version 0.4.0 Introduces Blog Functionality</h1>
+                <p class="undefined"></p>
+                
             </div>
         </div>
     </div>
@@ -95,10 +96,9 @@
 
 <div class="row">
 <div class="col-md-9" role="main">
-<!-- h2 --><h2 id="md-a-wiki-style-of-blogging">A Wiki-Style of Blogging</h2><p>Wikismith introduces a wiki-style of blogging that I think your going to love.
-Simply add tripple bracketed links to an index page.  Wikismith will recognize
-this tripple-brackets, generate a new page, and replace bracketed text with
-a <strong>page snippet</strong>.</p>
+<!-- h1 --><h1 class="page-header" id="md-a-wiki-style-of-blogging">A Wiki-Style of Blogging</h1><p>Add tripple bracketed links (known as <strong>index entries</strong>) and wikismith will generate a new page, and transform the bracketed text into a
+post summary befitting of a blog&#39;s index page.</p>
+<p>For example, the following <strong>index entries</strong>:</p>
 <pre>
 &#091;&#091;&#091;Most Recent Entry&#093;&#093;&#093;
 
@@ -107,24 +107,41 @@ a <strong>page snippet</strong>.</p>
 &#091;&#091;&#091;First Blog Entry&#093;&#093;&#093;
 </pre>
 
-<p>Page snippets show the standard meta data you would expect from a blog index.  Typically the
-following information is formatted in a page snippet.</p>
-<ul>
-<li><p>Title</p>
-</li>
-<li><p>Created Date</p>
-</li>
-<li><p>Author</p>
-</li>
-<li><p>Excerpt</p>
-</li>
-</ul>
-<!-- h2 --><h2 id="md-formatters">Formatters</h2><p>Wikismith formats <strong>page snippets</strong> via formatters.  Below is an example formatter for page_snippets.</p>
+<p>Would get transformed into:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span>Most Recent Entry<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span>2014/08/04 by J. Hicks<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ante enim ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Read More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span>Second Blog Entry<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span>2014/08/03 by J. Hicks<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ante enim ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Read More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span>First Blog Entry<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span>2014/08/01 by J. Hicks<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ante enim ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Read More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
+<!-- h1 --><h1 class="page-header" id="md-formatters">Formatters</h1><p>Wikismith formats <strong>index entries</strong> via formatters.  Below is the default formatter for index_entries.</p>
+<!-- h4 --><h4 id="md-formatters-index_entry-html">formatters/index_entry.html</h4><pre><code class="lang-ejs"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span><span class="vbscript">&lt;%=params.title%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span><span class="vbscript">&lt;%=params.created%&gt;</span> by <span class="vbscript">&lt;%=params.author%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="vbscript">&lt;%=params.excerpt%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"&lt;%=url%&gt;"</span>&gt;</span>Read More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+</code></pre>
 <!-- h4 --><h4 id="md-formatters-index-js">formatters/index.js</h4><pre><code class="lang-javascript"><span class="hljs-keyword">var</span> ejs = require('ejs');
 <span class="hljs-keyword">var</span> fs = require('fs');
 <span class="hljs-keyword">var</span> path = require('path');
 
-function page_snippet(file) {
+function index_entry(file) {
     <span class="hljs-keyword">var</span> <span class="hljs-keyword">template</span> = <span class="hljs-type">String</span>(fs.readFileSync(path.join(__dirname, 'page_snippet.html')));
 
     <span class="hljs-keyword">return</span> ejs.render(<span class="hljs-keyword">template</span>, {
@@ -137,14 +154,7 @@ module.exports = {
     page_snippet: page_snippet
 }
 </code></pre>
-<!-- h4 --><h4 id="md-formatters-page_snippet-html">formatters/page_snippet.html</h4><pre><code class="lang-ejs"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span><span class="vbscript">&lt;%=params.title%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span><span class="vbscript">&lt;%=params.created%&gt;</span> by <span class="vbscript">&lt;%=params.author%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="vbscript">&lt;%=params.excerpt%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"&lt;%=url%&gt;"</span>&gt;</span>Read More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre>
-<!-- h2 --><h2 id="md-roadmap">Roadmap</h2><p>In version 0.5, Wikismith will check the theme for overrides to default <strong>page snippet</strong> formatters.</p>
+<!-- h1 --><h1 class="page-header" id="md-roadmap">Roadmap</h1><p>In version 0.5, Wikismith will check the theme for overrides to default index_entry formatters.</p>
 <!-- end -->
 </div>
 
@@ -155,32 +165,6 @@ module.exports = {
             
             
             <li><a href="#md-a-wiki-style-of-blogging">A Wiki-Style of Blogging</a></li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
             
             

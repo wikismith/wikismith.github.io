@@ -17,6 +17,7 @@
     <!-- endinject -->
 
     <!-- inject:css -->
+    <link rel="stylesheet" href="/wsmith/css/blog.css">
     <link rel="stylesheet" href="/wsmith/css/docs.min.css">
     <link rel="stylesheet" href="/wsmith/css/github.css">
     <link rel="stylesheet" href="/wsmith/css/wsmith.css">
@@ -82,9 +83,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>The Wiki Aware SSG built on Gulp</h1>
-                <p></p>
+                <h1 class="home">The Streaming Static Site Generator</h1>
+                <p class="home"></p>
+                
                 <img src="/wsmith/img/wikismith_desk.png">
+                
             </div>
         </div>
     </div>
@@ -95,34 +98,17 @@
 
 <div class="row">
 <div class="col-md-9" role="main">
-<!-- h3 --><div class='row'><div class='col-sm-6'><h3 id="md-overview">Overview</h3><p><strong>Simple</strong> - No databases, comment moderation, or software updates - just your content.</p>
-<p><strong>Static</strong> - Markdown pages combine with themes and static sites come out ready for deployment.</p>
-<p><strong>Wiki Aware</strong> - The speedy gulp build process also provides Wiki page creation and linking.</p>
-</div><!-- h3 --><div class='col-sm-6'><h3 id="md-get-started">Get Started</h3><pre><code>npm <span class="hljs-operator"><span class="hljs-keyword">install</span> generator-wikismith</span>
+<!-- h1 --><h1 class="page-header">Transform Plain Text Into Themed Sites Using Gulp</h1>
+
+<!-- h3 --><div class='row'><div class='col-sm-6'><h3 id="md-benefits-and-features">Benefits and Features</h3><p><strong>Familiar</strong> - Use Gulp - wikismith doesn&#39;t have a new command line interface to learn.</p>
+<p><strong>Wiki Aware</strong> - Automate page generation and linking.</p>
+<p><strong>Blog Aware</strong> - Render index pages and permanent links.</p>
+</div><!-- h3 --><div class='col-sm-6'><h3 id="md-getting-started">Getting Started</h3><p>After you install npm, yo, and gulp.</p>
+<pre><code>npm <span class="hljs-operator"><span class="hljs-keyword">install</span> generator-wikismith</span>
 </code></pre><pre><code><span class="hljs-title">yo</span> wikismith
 </code></pre><pre><code>gulp
-</code></pre></div></div><!-- h1 --><h1 class="page-header" id="md-get-excited">Get Excited</h1><video id="pN3KxbxUnsY" class="sublime" width="640" height='480' title="Demonstration" data-uid="pN3KxbxUnsY" data-youtube-id="_PNYl50KIjw" preload="none">
-</video>
-
-
-<!-- h1 --><h1 class="page-header" id="md-how-it-works">How it works</h1><p>Wikismith is composed of <strong>Pages</strong>, <strong>Themes</strong>, and a <strong>Project Gulpfile</strong>.</p>
-<p>By default the project gulpfile performs the following tasks:</p>
-<ul>
-<li><p>Watches for changes to pages</p>
-</li>
-<li><p>Rebuilds pages on change</p>
-</li>
-<li><p>Watches for changes to themes</p>
-</li>
-<li><p>Runs theme&#39;s tasks on change</p>
-</li>
-<li><p>Live-Reloads the browser as needed :)</p>
-</li>
-<li><p>Creates new pages based on Wiki Syntax</p>
-</li>
-</ul>
-<!-- h1 --><h1 class="page-header" id="md-pages">Pages</h1><p>A wiki page is a simple text file composed of front-matter and markdown.
-Along with other variables, the front-matter specifies the theme.</p>
+</code></pre></div></div><!-- h1 --><h1 class="page-header" id="md-pages">Pages</h1><p>A wiki page is a simple text file composed of front-matter and markdown.
+Front-matter provides page meta data and specifies the theme.</p>
 <!-- h4 --><h4 id="md-front-matter">Front Matter</h4><pre><code class="lang-yaml"><span class="hljs-bullet">---
 </span>title: Congratulations!
 subtitle: You have successfully setup your Wikismith project.
@@ -150,7 +136,7 @@ dog's back.
 &gt;
 &gt; This is the second paragraph in the blockquote.
 </code></pre>
-<!-- h2 --><h2 id="md-page-wiki-functionality">Page Wiki Functionality</h2><p>Within the markup of a page, you can create a link by wrapping text in
+<!-- h1 --><h1 class="page-header" id="md-wiki-aware">Wiki Aware</h1><p>Within the markup of a page, you can create a link by wrapping text in
 <strong>&#091;&#091;Double Brackets&#093;&#093;</strong> This will cause the project&#39;s
 task runner to scaffold a new page and transform the bracketed text into a
 hyperlink.</p>
@@ -375,58 +361,6 @@ gulp.task(<span class="hljs-string">'default'</span>, <span class="hljs-function
             
             
             
-            <li><a href="#md-get-excited">Get Excited</a></li>
-            
-            
-            
-            
-            
-            <li><a href="#md-how-it-works">How it works</a></li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
             
             
@@ -445,7 +379,7 @@ gulp.task(<span class="hljs-string">'default'</span>, <span class="hljs-function
             
             
             
-            <li><a href="#md-page-wiki-functionality">Page Wiki Functionality</a></li>
+            <li><a href="#md-wiki-aware">Wiki Aware</a></li>
             
             
             
