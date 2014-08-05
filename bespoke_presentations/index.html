@@ -24,10 +24,9 @@
 </li>
 </ul>
 </section><!-- h2 --><section><h2 id="md-bespoke">Bespoke</h2><p>@markdalgleish</p>
-</section><!-- h1 --><h1 class="page-header" id="md-bespoke-and-wikismith">Bespoke and Wikismith</h1><p>Following is the page that created this presentation</p>
-<!-- h2 --><section><h2 id="md-page">Page</h2><pre><code><span class="hljs-bullet">---
+</section><!-- h1 --><h1 class="page-header" id="md-bespoke-and-wikismith">Bespoke and Wikismith</h1><p>Change the theme to &quot;bespoke&quot;</p>
+<!-- h4 --><section><h4 id="md-bespoke_presentation-md">bespoke_presentation.md</h4><pre><code><span class="hljs-bullet">---
 </span>title: Bespoke Presentations
-subtitle: This is my new posts subtitle
 author: Jeffrey Hicks
 theme: bespoke
 excerpt: Wikismith integrates Bespoke Presentations
@@ -39,9 +38,8 @@ excerpt: Wikismith integrates Bespoke Presentations
 
 Bespoke is a DIY PRESENTATION micro-framework
 
-
 <span class="hljs-header">LIGHTWEIGHT BUT POWERFUL
-------------</span>
+------------------------</span>
 
 <span class="hljs-bullet">* </span>Harnesses CSS transitions
 
@@ -51,11 +49,25 @@ Bespoke is a DIY PRESENTATION micro-framework
 
 <span class="hljs-bullet">* </span>And much more
 
-<span class="hljs-header">Bespoke
---------</span>
-
-@markdalgleish
-</code></pre></section><!-- end -->
+...
+</code></pre></section><!-- h3 --><section><h3 id="md-syntax-highlighting">Syntax Highlighting</h3><pre><code class="lang-javascript">    <span class="hljs-tag">marked</span><span class="hljs-class">.setOptions</span>(<span class="hljs-rules">{
+        <span class="hljs-rule"><span class="hljs-attribute">renderer</span>:<span class="hljs-value"> renderer,
+        highlight: function (code) {
+            return <span class="hljs-function">require</span>(<span class="hljs-string">'highlight.js'</span>).<span class="hljs-function">highlightAuto</span>(code).value</span></span>;
+        <span class="hljs-rule">}</span></span>
+    });
+</code></pre>
+</section><!-- h3 --><section><h3 id="md-wikismith">Wikismith</h3><ul>
+<li><p>Streaming Static Site Generation</p>
+</li>
+<li><p>Wiki</p>
+</li>
+<li><p>Blog</p>
+</li>
+<li><p>Presentations</p>
+</li>
+</ul>
+</section><!-- h1 --><h1 class="page-header" id="md--jrhicks">@jrhicks</h1><!-- end -->
 </article>
 
 <script src="/bespoke/build.js"></script>
