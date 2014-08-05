@@ -8,29 +8,40 @@
     <title>
         Bespoke Presentations
     </title>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,600">
     <link rel="stylesheet" href="/bespoke/build.css">
 </head>
 <body>
+
 <article>
-<!-- h1 --><h1 class="page-header" id="md-bespoke">Bespoke</h1><p>Bespoke is a DIY PRESENTATION micro-framework</p>
-<!-- h2 --><section><h2 id="md-lightweight-but-powerful">LIGHTWEIGHT BUT POWERFUL</h2><ul>
-<li><p>Harnesses CSS transitions</p>
+<!-- h1 --><section class="" ><h1 class="page-header" id="md-bespoke">Bespoke</h1><p>DIY PRESENTATION micro-framework</p>
+</section><!-- h2 --><section class="" ><h2 id="md-lightweight-and-powerful">Lightweight and Powerful</h2><ul>
+<li><p>CSS transitions</p>
 </li>
-<li><p>Control API</p>
+<li><p>Plugins</p>
 </li>
-<li><p>Events</p>
+<li><p>Generators</p>
 </li>
-<li><p>And much more</p>
+<li><p>Themes</p>
 </li>
 </ul>
-</section><!-- h2 --><section><h2 id="md-bespoke">Bespoke</h2><p>@markdalgleish</p>
-</section><!-- h1 --><h1 class="page-header" id="md-bespoke-and-wikismith">Bespoke and Wikismith</h1><p>Change the theme to &quot;bespoke&quot;</p>
-<!-- h4 --><section><h4 id="md-bespoke_presentation-md">bespoke_presentation.md</h4><pre><code><span class="hljs-bullet">---
+</section><!-- h2 --><section class="gif"  style="background-image: url(slowclap.gif)" ><h2 id="md-bespoke">Bespoke</h2><!--- slowclap.gif -->
+
+<p>@markdalgleish</p>
+</section><!-- h1 --><section class="" ><h1 class="page-header" id="md-wikismith">Wikismith</h1><p>Static Site Generator</p>
+</section><!-- h2 --><section class="" ><h2 id="md-transforms-markdown">Transforms Markdown</h2><p><strong>into</strong></p>
+<ul>
+<li><p>Beautiful Things</p>
+</li>
+<li><p><strong>including</strong></p>
+</li>
+<li><p>Presentations :)</p>
+</li>
+</ul>
+</section><!-- h2 --><section class="" ><h2 id="md-markdown">Markdown</h2><pre><code><span class="hljs-bullet">---
 </span>title: Bespoke Presentations
-author: Jeffrey Hicks
-theme: bespoke
-excerpt: Wikismith integrates Bespoke Presentations
-<span class="hljs-header">created: "Mon Aug 04 2014 22:25:19 GMT-0500 (CDT)"
+<span class="hljs-header">theme: bespoke
 ---</span>
 
 <span class="hljs-header">Bespoke
@@ -50,24 +61,99 @@ Bespoke is a DIY PRESENTATION micro-framework
 <span class="hljs-bullet">* </span>And much more
 
 ...
-</code></pre></section><!-- h3 --><section><h3 id="md-syntax-highlighting">Syntax Highlighting</h3><pre><code class="lang-javascript">    <span class="hljs-tag">marked</span><span class="hljs-class">.setOptions</span>(<span class="hljs-rules">{
-        <span class="hljs-rule"><span class="hljs-attribute">renderer</span>:<span class="hljs-value"> renderer,
-        highlight: function (code) {
-            return <span class="hljs-function">require</span>(<span class="hljs-string">'highlight.js'</span>).<span class="hljs-function">highlightAuto</span>(code).value</span></span>;
-        <span class="hljs-rule">}</span></span>
-    });
+</code></pre></section><!-- h2 --><section class="" ><h2 id="md-sections">Sections</h2><pre><code><span class="hljs-header">Slide 1
+======================</span>
+
+<span class="hljs-bullet">* </span>My Great Point
+
+<span class="hljs-bullet">* </span>My Other Point
+
+<span class="hljs-header">Slide 2
+======================</span>
+
+<span class="hljs-bullet">* </span>Concluding Point
+
+<span class="hljs-bullet">* </span>Final Point
+</code></pre></section><!-- h2 --><section  data-bespoke-state="green" class="" ><h2 id="md-states">States</h2><!--- green -->
+
+<pre>
+<code>
+Slide 1
+======================
+&lt!--- green -->
+
+* My Great Point
+
+* My Other Point
+
+Slide 2
+======================
+
+* Concluding Point
+
+* Final Point
+
+</code>
+</pre>
+
+
+</section><!-- h2 --><section class="gif"  style="background-image: url(drummer.gif)" ><h2 id="md-background-images">Background Images</h2><!--- drummer.gif -->
+
+<pre>
+<code>
+Slide 1
+======================
+&lt!--- drummer.gif -->
+
+* My Great Point
+
+* My Other Point
+
+Slide 2
+======================
+
+* Concluding Point
+
+* Final Point
+
+</code>
+</pre>
+
+
+</section><!-- h2 --><section class="" ><h2 id="md-syntax-highlighting">Syntax Highlighting</h2><pre>
+<code>
+```javascript
+function fib(n) {
+    if (n>1) {
+        return fib(n-1) + fib(n-2) }
+    else {
+      reutrn n
+    }
+}
+```
+</code>
+</pre>
+
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fib</span><span class="hljs-params">(n)</span> </span>{
+    <span class="hljs-keyword">if</span> (n&gt;<span class="hljs-number">1</span>) {
+        <span class="hljs-keyword">return</span> fib(n-<span class="hljs-number">1</span>) + fib(n-<span class="hljs-number">2</span>) }
+    <span class="hljs-keyword">else</span> {
+      reutrn n
+    }
+}
 </code></pre>
-</section><!-- h3 --><section><h3 id="md-wikismith">Wikismith</h3><ul>
-<li><p>Streaming Static Site Generation</p>
+</section><!-- h2 --><section class="" ><h2 id="md-is-it-ready-">Is it Ready?</h2><ul>
+<li><p>.....</p>
 </li>
-<li><p>Wiki</p>
-</li>
-<li><p>Blog</p>
-</li>
-<li><p>Presentations</p>
+<li><p>Almost!</p>
 </li>
 </ul>
-</section><!-- h1 --><h1 class="page-header" id="md--jrhicks">@jrhicks</h1><!-- end -->
+</section><!-- h2 --><section class="" ><h2 id="md-whats-next">Whats Next</h2><ul>
+<li>Theme integration</li>
+</ul>
+</section><!-- h2 --><section class="" ><h2 id="md-learn-more">Learn More</h2><p><a href="http://wikismith.com">Wikismith.com</a> - Streaming Static Site Generation</p>
+<p><a href="http://markdalgleish.com/presentations/bespoke.js/">Bespoke.js</a> - DIY Micro Presentation Framework</p>
+</section><!-- h1 --><section class="" ><h1 class="page-header" id="md--jrhicks">@jrhicks</h1></section><!-- end -->
 </article>
 
 <script src="/bespoke/build.js"></script>
