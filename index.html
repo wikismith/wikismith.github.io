@@ -98,14 +98,19 @@
 
 <div class="row">
 <div class="col-md-9" role="main">
-<!-- h1 --><h1 class="page-header">Transform Plain Text Into A Beautiful Wikis, Blogs and Presentations </h1>
+<!-- h1 --><h1 class="page-header">Transform Plain Text Into Beautiful Wiki Pages, Blog Posts, and Presentations. </h1>
 
 <!-- h2 --><h2 id="md-getting-started">Getting Started</h2><p>After you install npm, yo, and gulp.</p>
 <pre><code>npm <span class="hljs-operator"><span class="hljs-keyword">install</span> generator-wikismith</span>
 </code></pre><pre><code><span class="hljs-title">yo</span> wikismith
 </code></pre><pre><code>gulp
-</code></pre><!-- h1 --><h1 class="page-header" id="md-plain-text">Plain Text</h1><p>Wikismith content operates on simple plain text files.  These plain text files (called <strong>pages</strong>) are composed
- of front-matter meta data and markdown.</p>
+</code></pre><!-- h1 --><h1 class="page-header" id="md-plain-text">Plain Text</h1><p>Wikismith operates on plain text files known as <strong>pages</strong>.  These pages are composed of front-matter and markdown.</p>
+<ul>
+<li><p>Front-matter - Page specific variables used by wikismith to select the theme and render pages.</p>
+</li>
+<li><p>Markdown - Easy to read, easy easy-to-write plain text format that predictably converts to HTML.</p>
+</li>
+</ul>
 <!-- h4 --><h4 id="md-example-page">Example Page</h4><pre><code class="lang-yaml"><span class="hljs-bullet">---
 </span>title: Congratulations!
 subtitle: You have successfully setup your Wikismith project.
@@ -133,16 +138,16 @@ dog's back.
 &gt;
 &gt; This is the second paragraph in the blockquote.
 </code></pre>
-<!-- h1 --><h1 class="page-header" id="md-themes">Themes</h1><p>Wikismith themes are completely front-end and back-end agnostic.  They are free to use
-any templating language and you can utilize and any node package.</p>
-<p>Currently Wikiwmith ships with 2 themes</p>
+<!-- h1 --><h1 class="page-header" id="md-themes">Themes</h1><p>Currently Wikiwmith ships with 2 easily customized themes.  Each page can select
+its theme via the front-matter.</p>
 <ul>
 <li><p><a href='/bootstrap_3_theme/index.html'>Bootstrap 3 Theme</a> Live Demo</p>
 </li>
 <li><p><a href='/bespoke_presentations/index.html'>Bespoke Presentations</a> Live Demo</p>
 </li>
 </ul>
-<p>Additional information is available if you would like to <a href='/learn_more_about_themes/index.html'>Learn More About Themes</a></p>
+<p>Wikismith themes are completely front-end and back-end agnostic.  They are free to use
+any templating language and you can utilize and any node package.  <a href='/learn_more_about_themes/index.html'>Learn More About Themes</a></p>
 <!-- h1 --><h1 class="page-header" id="md-wiki">Wiki</h1><p>Wikismith provides wiki functionality through <strong>wiki links</strong> Wiki links are markdown fragments surrounded by double brackets. Wikismith uses these to auto-generate new pages and render links.</p>
 <p>Examples:</p>
 <pre>
@@ -257,9 +262,25 @@ DIY PRESENTATION micro-framework
             
             
             
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             <li><a href="#md-themes">Themes</a></li>
-            
-            
             
             
             
