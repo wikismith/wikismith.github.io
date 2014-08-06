@@ -88,115 +88,64 @@
 
 <div class="row">
 <div class="col-md-9" role="main">
-<!-- h1 --><h1 class="page-header">Transform Plain Text Into Themed Sites, Wikis, Blogs and Presentation</h1>
-
-<!-- h2 --><h2 id="md-getting-started">Getting Started</h2><p>After you install npm, yo, and gulp.</p>
-<pre><code>npm <span class="hljs-operator"><span class="hljs-keyword">install</span> generator-wikismith</span>
-</code></pre><pre><code><span class="hljs-title">yo</span> wikismith
-</code></pre><pre><code>gulp
-</code></pre><!-- h1 --><h1 class="page-header" id="md-plain-text">Plain Text</h1><p>Wikismith content operates on simple plain text files.  These plain text files (called <strong>pages</strong>) are composed
- of front-matter meta data and markdown.</p>
-<!-- h4 --><h4 id="md-example-page">Example Page</h4><pre><code class="lang-yaml"><span class="hljs-bullet">---
-</span>title: Congratulations!
-subtitle: You have successfully setup your Wikismith project.
-created: 2014/06/29 16:40 CST
-author: Jeffrey R. Hicks
-<span class="hljs-header">theme: bs3
----</span>
-
-<span class="hljs-header">A First Level Header
-====================</span>
-
-<span class="hljs-header">A Second Level Header
----------------------</span>
-
-Now is the time for all good men to come to
-the aid of their country. This is just a
-regular paragraph.
-
-The quick brown fox jumped over the lazy
-dog's back.
-
-### Header 3
-
-&gt; This is a blockquote.
-&gt;
-&gt; This is the second paragraph in the blockquote.
-</code></pre>
-<!-- h1 --><h1 class="page-header" id="md-themes">Themes</h1><p>Wikismith themes are completely front-end and back-end agnostic.  They are free to use
-any templating language and you can utilize and any node package.</p>
-<p>Currently Wikiwmith ships with 2 themes</p>
+<!-- h1 --><h1 class="page-header" id="md-quod-reserabo-carae-tympana-quantum-nequiquam-missus">Quod reserabo carae tympana quantum nequiquam missus</h1><!-- h2 --><h2 id="md-obstipuit-inque">Obstipuit inque</h2><p>Lorem markdownum concursum emicuit terque virgis, abit et dente possederat
+meorum ferrum licet mecum <strong>sic Neoptolemum</strong>! Aliae mihi Chromin.</p>
+<p>Alarum sine inscius clementissimus cupies tormentis occuluit quicquid
+celebrabant sermonibus vestigia harenae, advertite famaque. Herbas agam: est
+ante ventoque etiamnum, hinc coniuge, pertimuit. In modo illam successit tempora
+reficisque pectusque genitor arborei rostrum. Sustinuisse sidus, per qui cum
+ille arcum priora, defendite dissipat magna rastroque facerem moveri, hoc ea
+currum. Ait rogata, <strong>mea gemit</strong> Cyllenius <em>quondam</em> belli intus sidereo.</p>
+<!-- h2 --><h2 id="md-deorum-flamine-peloro-vallis-est-igne-guttis">Deorum flamine Peloro vallis est igne guttis</h2><p><a href="http://www.raynelongboards.com/">Vim annis</a> curvavit amorem, concretum et
+raptam ore erit <a href="http://www.lipsum.com/">lex si</a> diversis nec averserisque
+terrae ad bos. Cum nec tinguebat adspicit spumaque temporis in utque leto, nos
+<a href="http://tumblr.com/">Chimaera certat obnoxius</a> victa superi inpune manibusque
+Iunoni; eris. Primo periturae summa genetrix caelum, indignave campos gravitate
+lacrimas robusta ipsa iuvant equas petitur! Colerent et <strong>Paphon</strong>. Ostendere
+rerum acta, suos subdita origine foret.</p>
 <ul>
-<li><p><a href='/bootstrap_3_theme/index.html'>Bootstrap 3 Theme</a> Live Demo</p>
-</li>
-<li><p><a href='/bespoke_presentations/index.html'>Bespoke Presentations</a> Live Demo</p>
-</li>
+<li>Causamque madidas</li>
+<li>Exercuit bracchia gratus venti teneris</li>
+<li>Picus seu quamquam</li>
+<li>Claninque regna</li>
+<li>Conducat Iove inguine est cumque totumque coruscis</li>
+<li>Aiaci facitis cura qui salutis nulla</li>
 </ul>
-<p><a href='/learn_more_about_themes/index.html'>Learn More About Themes</a></p>
-<!-- h1 --><h1 class="page-header" id="md-wiki">Wiki</h1><p>Wikismith provides wiki functionality through <strong>wiki links</strong></p>
-<p>Wiki links are markdown fragments surrounded in double brackets.
-Wikismith uses these to auto-generate
-new pages and render links.</p>
-<p>Examples:</p>
-<pre>
-&#091;&#091;Most Recent Entry&#093;&#093
-
-&#091;&#091;Second Blog Entry&#093;&#093
-
-&#091;&#091;First Blog Entry&#093;&#093;
-</pre>
-
-<p>Examples Rendered:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Most Recent Post<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Most Recent Post<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Most Recent Post<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
-</code></pre>
-<!-- h1 --><h1 class="page-header" id="md-blogging">Blogging</h1><p>Wikismith provides blogging functionality through <strong>index entries</strong></p>
-<p>Index entries are markdown fragments surrounded in triple brackets that
-provide a radically simplified blogging functionality.  Wikismith uses these to auto-generate
-new posts and render post previews
-that include titles, meta data, excerpts, and permalinks.</p>
-<p>Examples:</p>
-<pre>
-&#091;&#091;&#091;Most Recent Post&#093;&#093;&#093;
-
-&#091;&#091;&#091;Second Blog Post&#093;&#093;&#093;
-
-&#091;&#091;&#091;First Blog Post&#093;&#093;&#093;
-</pre>
-
-<p>Examples Rendered:</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span>Most Recent Post<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span>2014/08/04 by J. Hicks<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ante enim ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Read More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span>Second Blog Post<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span>2014/08/03 by J. Hicks<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ante enim ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Read More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span>First Blog Post<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span>2014/08/01 by J. Hicks<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ante enim ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Read More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre>
-<!-- h2 --><h2 id="md-formatters">Formatters</h2><p>Wikismith formats <strong>index entries</strong> via formatters.  Below is the default formatter for index_entries.</p>
-<!-- h4 --><h4 id="md-formatters-index_entry-html">formatters/index_entry.html</h4><pre><code class="lang-ejs"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span><span class="vbscript">&lt;%=params.title%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span><span class="vbscript">&lt;%=params.created%&gt;</span> by <span class="vbscript">&lt;%=params.author%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="vbscript">&lt;%=params.excerpt%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"&lt;%=url%&gt;"</span>&gt;</span>Read More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
-</code></pre>
+<!-- h2 --><h2 id="md-nullos-hostis-terraque">Nullos hostis terraque</h2><p>Non amens premebat quam autumnum degener Aegides tollere. Mota esse teneo
+saxaque lassavit trunco circum aliquid artificem <strong>Cephalus regemque veteres</strong>
+quas. Longis rear tristis possis: erat mihi fervens multorumque facies solvi.</p>
+<pre><code>smishing.<span class="hljs-variable">megahertz =</span> digital;
+<span class="hljs-keyword">if</span> (marketPretest.backup.half_client_fat(-<span class="hljs-number">2</span> - wysiwygCisc, sinkBluetooth) &lt;=
+        arp_osd) {
+    memoryIpadFifo /= task_website * vci_qbe;
+    cloud_runtime.<span class="hljs-variable">website_file_waveform =</span> cdnTweetThyristor(hdv, cifs,
+            backboneCommercialCybersquatter);
+    pdf_point += design_text;
+}
+<span class="hljs-keyword">if</span> (<span class="hljs-number">4</span>) {
+    zebibyte(isoXslt, -<span class="hljs-number">5</span>, vaporware);
+    <span class="hljs-variable">x =</span> <span class="hljs-number">47</span>;
+}
+<span class="hljs-variable">rdramBuffer =</span> leak - emoticon;
+<span class="hljs-variable">runtime =</span> pciWimax.firmware_bare(<span class="hljs-number">3</span> + prom, <span class="hljs-number">1</span>) + lossless_keystroke;
+</code></pre><!-- h2 --><h2 id="md-rubescunt-quotiens">Rubescunt quotiens</h2><p>Rursusque furit partes: <em>deo quem vitiaverat</em> invida penna, adflatuque sed
+recepit vox Cerambi parte, profectura! Vulgat quoque, magis <em>ego vulnere</em>, et
+erat. Enim inplicet posse. Origo aut puer metu mihi crines ut dixerat, ab hos
+petentes annos diu Lycabas lucem cum nec.</p>
+<pre><code><span class="hljs-keyword">if</span> (php_gigahertz_pop != eps + zero_stick) {
+    streaming_ftp_phreaking(<span class="hljs-number">3</span> + zone, smartphone);
+}
+ddr_lte_keywords(<span class="hljs-keyword">dot</span> + -<span class="hljs-number">1</span>, driver_design - mashupHyperTween(dvd_dma));
+<span class="hljs-keyword">if</span> (balancingIvrMonitor) {
+    <span class="hljs-keyword">memory</span> += cloud_mini + thread(<span class="hljs-number">4</span>, xmp_network_smm, <span class="hljs-number">5</span>);
+    <span class="hljs-keyword">print</span> = vaporware_undo_apple(ios, -<span class="hljs-number">4</span>);
+    binary_html(iteration_hoc.sql_source_sip.rate(<span class="hljs-number">942621</span>, shellVci),
+            intranet_boot(bufferBrowserRss, google), dhcpServlet);
+}
+pciViral = abend_cookie_domain;
+</code></pre><p>Vixque <strong>et fecit concolor</strong> cautus ut Pontum, ut quae fertilis saxo! Quoque
+sis! Fallite Trachinia <em>dilectaque domusque</em> equidem captae et currus preme <a href="http://tumblr.com/">me
+est</a> res tempestiva, sic.</p>
 <!-- end -->
 </div>
 
@@ -206,23 +155,24 @@ that include titles, meta data, excerpts, and permalinks.</p>
             
             
             
+            <li><a href="#md-quod-reserabo-carae-tympana-quantum-nequiquam-missus">Quod reserabo carae tympana quantum nequiquam missus</a></li>
             
             
             
+            <li><a href="#md-obstipuit-inque">Obstipuit inque</a></li>
             
-            <li><a href="#md-getting-started">Getting Started</a></li>
             
             
             
             
             
             
+            <li><a href="#md-deorum-flamine-peloro-vallis-est-igne-guttis">Deorum flamine Peloro vallis est igne guttis</a></li>
             
             
             
             
             
-            <li><a href="#md-plain-text">Plain Text</a></li>
             
             
             
@@ -232,7 +182,6 @@ that include titles, meta data, excerpts, and permalinks.</p>
             
             
             
-            <li><a href="#md-themes">Themes</a></li>
             
             
             
@@ -260,13 +209,13 @@ that include titles, meta data, excerpts, and permalinks.</p>
             
             
             
-            <li><a href="#md-wiki">Wiki</a></li>
             
             
             
             
             
             
+            <li><a href="#md-nullos-hostis-terraque">Nullos hostis terraque</a></li>
             
             
             
@@ -274,25 +223,7 @@ that include titles, meta data, excerpts, and permalinks.</p>
             
             
             
-            
-            
-            <li><a href="#md-blogging">Blogging</a></li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <li><a href="#md-formatters">Formatters</a></li>
+            <li><a href="#md-rubescunt-quotiens">Rubescunt quotiens</a></li>
             
             
             
