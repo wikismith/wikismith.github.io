@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Wikismith">
+
     <title>
-     Wikismith - Streaming Static Site Generator for fans of Gulp and Bower
+        BS3 Theme
     </title>
 
-    <script type="text/javascript" src="//cdn.sublimevideo.net/js/sgscg0y1.js"></script>
-
-    <meta name="viewport" content="width=device-width">
-
-    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab" rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/css?family=Roboto" rel='stylesheet' type='text/css'>
-
     <!-- bower:css -->
-    <link rel="stylesheet" href="/wsmith/bower/css/bootstrap.css">
+    <link rel="stylesheet" href="/bs3/bower/css/bootstrap.css">
     <!-- endinject -->
 
     <!-- inject:css -->
-    <link rel="stylesheet" href="/wsmith/css/blog.css">
-    <link rel="stylesheet" href="/wsmith/css/docs.min.css">
-    <link rel="stylesheet" href="/wsmith/css/github.css">
-    <link rel="stylesheet" href="/wsmith/css/wsmith.css">
+    <link rel="stylesheet" href="/bs3/css/blog.css">
+    <link rel="stylesheet" href="/bs3/css/docs.min.css">
+    <link rel="stylesheet" href="/bs3/css/railscasts.css">
     <!-- endinject -->
-
 
     <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -48,23 +45,25 @@
 <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
     <div class="container">
         <div class="navbar-header">
-
-            <img src="/wsmith/img/wikismith_200px.png">
-
             <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            
-            <a href="/" class="navbar-brand">WIKISMITH</a>
+            <a href="../../../" class="navbar-brand">Wikismith</a>
         </div>
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-
+            <!--
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="/blog/index.html">Blog</a>
+                    <a href="/interests.html">Interest</a>
+                </li>
+                <li>
+                    <a href="/projects">Projects</a>
+                </li>
+                <li>
+                    <a href="/about">Speaking</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -79,26 +78,17 @@
 
 <!-- Docs page layout -->
 <div class="bs-docs-header" id="content">
-
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="home">The Streaming Static Site Generator</h1>
-                <p class="home"></p>
-                
-                <img src="/wsmith/img/wikismith_desk.png">
-                
-            </div>
-        </div>
+        <h1>Bootstrap 3 Theme</h1>
+        <p></p>
     </div>
-
 </div>
 
 <div class="container bs-docs-container">
 
 <div class="row">
 <div class="col-md-9" role="main">
-<!-- h1 --><h1 class="page-header">Transform Plain Text Into A Beautiful Wikis, Blogs and Presentations </h1>
+<!-- h1 --><h1 class="page-header">Transform Plain Text Into Themed Sites, Wikis, Blogs and Presentation</h1>
 
 <!-- h2 --><h2 id="md-getting-started">Getting Started</h2><p>After you install npm, yo, and gulp.</p>
 <pre><code>npm <span class="hljs-operator"><span class="hljs-keyword">install</span> generator-wikismith</span>
@@ -142,94 +132,79 @@ any templating language and you can utilize and any node package.</p>
 <li><p><a href='/bespoke_presentations/index.html'>Bespoke Presentations</a> Live Demo</p>
 </li>
 </ul>
-<p>Additional information is available if you would like to <a href='/learn_more_about_themes/index.html'>Learn More About Themes</a></p>
-<!-- h1 --><h1 class="page-header" id="md-wiki">Wiki</h1><p>Wikismith provides wiki functionality through <strong>wiki links</strong> Wiki links are markdown fragments surrounded by double brackets. Wikismith uses these to auto-generate new pages and render links.</p>
+<p><a href='/learn_more_about_themes/index.html'>Learn More About Themes</a></p>
+<!-- h1 --><h1 class="page-header" id="md-wiki">Wiki</h1><p>Wikismith provides wiki functionality through <strong>wiki links</strong></p>
+<p>Wiki links are markdown fragments surrounded in double brackets.
+Wikismith uses these to auto-generate
+new pages and render links.</p>
 <p>Examples:</p>
 <pre>
+&#091;&#091;Most Recent Entry&#093;&#093
 
-* &#091;&#091;A Cool Page&#093;&#093;
+&#091;&#091;Second Blog Entry&#093;&#093
 
-* &#091;&#091;Another Cool Page&#093;&#093;
-
+&#091;&#091;First Blog Entry&#093;&#093;
 </pre>
 
 <p>Examples Rendered:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">'/a_cool_page'</span>&gt;</span>A Cool Page<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">'/another_cool_page'</span>&gt;</span>Another Cool Page<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Most Recent Post<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Most Recent Post<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Most Recent Post<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
 </code></pre>
 <!-- h1 --><h1 class="page-header" id="md-blogging">Blogging</h1><p>Wikismith provides blogging functionality through <strong>index entries</strong></p>
 <p>Index entries are markdown fragments surrounded in triple brackets that
 provide a radically simplified blogging functionality.  Wikismith uses these to auto-generate
-new posts and render post previews via <a href='/formatters/index.html'>formatters</a>.</p>
+new posts and render post previews
+that include titles, meta data, excerpts, and permalinks.</p>
 <p>Examples:</p>
 <pre>
-&#091;&#091;&#091;Most Recent Entry&#093;&#093;&#093;
+&#091;&#091;&#091;Most Recent Post&#093;&#093;&#093;
 
-&#091;&#091;&#091;Second Blog Entry&#093;&#093;&#093;
+&#091;&#091;&#091;Second Blog Post&#093;&#093;&#093;
 
-&#091;&#091;&#091;First Blog Entry&#093;&#093;&#093;
+&#091;&#091;&#091;First Blog Post&#093;&#093;&#093;
 </pre>
 
 <p>Examples Rendered:</p>
 <pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span>Most Recent Entry<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span>Most Recent Post<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span>2014/08/04 by J. Hicks<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ante enim ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Read More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span>Second Blog Entry<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span>Second Blog Post<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span>2014/08/03 by J. Hicks<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ante enim ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Read More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 
 <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span>First Blog Entry<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span>First Blog Post<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span>2014/08/01 by J. Hicks<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ante enim ...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"/most_recent_post"</span>&gt;</span>Read More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre>
-<!-- h2 --><h2 id="md-presentations">Presentations</h2><p>Wikismith can turn pages into presentations by simply changing the theme to <strong>bespoke</strong>.
-Below is the markup for an example presentation.</p>
-<p>Presentation Markdown</p>
-<pre><code class="lang-yaml"><span class="hljs-bullet">---
-</span>title: Bespoke Presentations
-author: Jeffrey Hicks
-theme: bespoke
-excerpt: Wikismith integrates Bespoke Presentations
-<span class="hljs-header">created: "Mon Aug 04 2014 22:25:19 GMT-0500 (CDT)"
----</span>
-
-<span class="hljs-header">Bespoke
-=======</span>
-
-DIY PRESENTATION micro-framework
-
-<span class="hljs-header">Lightweight and Powerful
-------------------------</span>
-
-<span class="hljs-bullet">* </span>CSS transitions
-
-<span class="hljs-bullet">* </span>Plugins
-
-<span class="hljs-bullet">* </span>Generators
-
-<span class="hljs-bullet">* </span>Themes
-
-...
+<!-- h2 --><h2 id="md-formatters">Formatters</h2><p>Wikismith formats <strong>index entries</strong> via formatters.  Below is the default formatter for index_entries.</p>
+<!-- h4 --><h4 id="md-formatters-index_entry-html">formatters/index_entry.html</h4><pre><code class="lang-ejs"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-title"</span>&gt;</span><span class="vbscript">&lt;%=params.title%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"blog-post-meta"</span>&gt;</span><span class="vbscript">&lt;%=params.created%&gt;</span> by <span class="vbscript">&lt;%=params.author%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="vbscript">&lt;%=params.excerpt%&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"&lt;%=url%&gt;"</span>&gt;</span>Read More<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
 </code></pre>
-<p><a href='/bespoke_presentations/index.html'>Bespoke Presentations</a> - Live Demo</p>
 <!-- end -->
 </div>
 
 <div class="col-md-3">
     <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
         <ul class="nav bs-docs-sidenav">
+            
+            
             
             
             
@@ -299,6 +274,8 @@ DIY PRESENTATION micro-framework
             
             
             
+            
+            
             <li><a href="#md-blogging">Blogging</a></li>
             
             
@@ -315,9 +292,7 @@ DIY PRESENTATION micro-framework
             
             
             
-            <li><a href="#md-presentations">Presentations</a></li>
-            
-            
+            <li><a href="#md-formatters">Formatters</a></li>
             
             
             
@@ -342,30 +317,22 @@ DIY PRESENTATION micro-framework
 ================================================== -->
 <footer class="bs-docs-footer" role="contentinfo">
     <div class="container">
-        <p>Bootstrap Code licensed under <a href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a></p>
-        <p>Wikismith Logo and Desk art is solely licensed for use on this page.</p>
+        <p>Generated with <a href="http://wikismith.com">Wikismith</a> - <a href="http://getbootstrap.com">Bootstrap 3</a> Theme
     </div>
 </footer>
 
 <!-- bower:js -->
-<script src="/wsmith/bower/js/jquery.js"></script>
-<script src="/wsmith/bower/js/bootstrap.js"></script>
+<script src="/bs3/bower/js/jquery.js"></script>
+<script src="/bs3/bower/js/bootstrap.js"></script>
 <!-- endinject -->
 
 <!-- inject:js -->
-<script src="/wsmith/js/docs.min.js"></script>
+<script src="/bs3/js/docs.min.js"></script>
 <!-- endinject -->
 
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-53439609-1', 'auto');
-    ga('send', 'pageview');
 
-</script>
+
 
 </body>
 </html>
