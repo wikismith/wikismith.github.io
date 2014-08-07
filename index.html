@@ -100,7 +100,7 @@
 <div class="col-md-9" role="main">
 <!-- h1 --><h1 class="page-header">Build Wiki Pages, Blog Posts, and Presentations. </h1>
 
-<!-- h2 --><h2 id="md-getting-started">Getting Started</h2><p>After you install npm, yo, and gulp.</p>
+<!-- h2 --><h2 id="md-getting-started">Getting Started</h2><p>Assuming you have yo and gulp installed.</p>
 <pre><code>npm <span class="hljs-operator"><span class="hljs-keyword">install</span> generator-wikismith</span>
 </code></pre><pre><code><span class="hljs-title">yo</span> wikismith
 </code></pre><pre><code>gulp
@@ -114,29 +114,15 @@
    |---bs3
 </code></pre>
 
-<!-- h1 --><h1 class="page-header" id="md-pages">Pages</h1><p>Pages in wikismith are plain text files organized in folders next to other content they reference.</p>
-<p>Example Pages</p>
-<pre><code>Pages
-   |-index
-   |---index.md
-   |-intro_to_gulp
-   |---index.md
-   |---gulp_logo.png
-   |---grunt_logo.png
-   |-intro_to_npm
-   |---index.md
-   |---nodejs_logo.png
-   |---npm_logo.png
+<!-- h1 --><h1 class="page-header" id="md-pages">Pages</h1><p>Pages are folders containing a plain text file (index.md) and images.</p>
+<pre><code>intro_to_gulp
+   |-index.md
+   |-gulp_graphic.png
+   |-grunt_graphic.png
 </code></pre>
 
-<p>The index.md file in each folder is the heart of every page.  It contains a header and body.</p>
-<ul>
-<li><p><strong>header</strong> - A YAML encoded set of variables that specify page metadata and the theme.  Also referred to as front-matter.</p>
-</li>
-<li><p><strong>body</strong> - The Markdown encoded page content that is easy-to-read, and easy-to-write.</p>
-</li>
-</ul>
-<!-- h4 --><h4 id="md-example-index-md">Example Index.md</h4><pre><code class="lang-yaml"><span class="hljs-bullet">---
+<p>Index.md is a plain-text file composed of a header and body.  The <strong>header</strong> is a YAML encoded set of variables (known as front-matter) that specify page variables and theme.  The <strong>body</strong> is a Markdown encoded page content that is easy-to-read, and easy-to-write.</p>
+<!-- h4 --><h4 id="md-example">Example</h4><pre><code class="lang-yaml"><span class="hljs-bullet">---
 </span>title: Congratulations!
 subtitle: You have successfully setup your Wikismith project.
 created: 2014/06/29 16:40 CST
@@ -293,26 +279,6 @@ DIY PRESENTATION micro-framework
             
             
             <li><a href="#md-pages">Pages</a></li>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
             
             
