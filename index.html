@@ -14,14 +14,18 @@
 
     <!-- bower:css -->
     <link rel="stylesheet" href="/wsmith/bower/css/bootstrap.css">
+    <link rel="stylesheet" href="/wsmith/bower/css/index.css">
     <!-- endinject -->
 
     <!-- inject:css -->
     <link rel="stylesheet" href="/wsmith/css/blog.css">
     <link rel="stylesheet" href="/wsmith/css/docs.min.css">
     <link rel="stylesheet" href="/wsmith/css/github.css">
+    <link rel="stylesheet" href="/wsmith/css/pulltab.css">
     <link rel="stylesheet" href="/wsmith/css/wsmith.css">
+    <link rel="stylesheet" href="/wsmith/css/ribbon.css">
     <!-- endinject -->
+
 
 
     <!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -42,6 +46,8 @@
 
 </head>
 <body>
+<h2 class="crp-CornerRibbon"><a class="ribbon" style="color: white;" href="https://github.com/wikismith/site/edit/master/pages/index/index.md"> Edit Me </a></h2>
+
 <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
 <!-- Docs master nav -->
@@ -94,13 +100,12 @@
 
 </div>
 
+
 <div class="container bs-docs-container">
 
 <div class="row">
 <div class="col-md-9" role="main">
-<!-- h1 --><h1 class="page-header">Build Wiki Pages, Blog Posts, and Presentations. </h1>
-
-<!-- h2 --><h2 id="md-getting-started">Getting Started</h2><p>Assuming you have yo and gulp installed.</p>
+<!-- h1 --><h1 class="page-header" id="md-getting-started">Getting Started</h1><p>Assuming you have yo and gulp installed.</p>
 <pre><code>npm <span class="hljs-operator"><span class="hljs-keyword">install</span> generator-wikismith</span>
 </code></pre><pre><code><span class="hljs-title">yo</span> wikismith
 </code></pre><pre><code>gulp
@@ -241,20 +246,14 @@ DIY PRESENTATION micro-framework
 ...
 </code></pre>
 <p><a href='/bespoke_presentations/index.html'>Bespoke Presentations</a> - Live Demo</p>
-<!-- h1 --><h1 class="page-header" id="md-mentions">Mentions</h1><p><blockquote class="twitter-tweet" lang="en"><p>Cool little Gulp based static site generator: <a href="http://t.co/8rZtptTAqX">http://t.co/8rZtptTAqX</a> by <a href="https://twitter.com/jrhicks">@jrhicks</a></p>&mdash; Taylor Otwell (@taylorotwell) <a href="https://twitter.com/taylorotwell/statuses/496831540266295296">August 6, 2014</a></blockquote></p>
+<!-- h1 --><h1 class="page-header" id="md-notable-mentions">Notable Mentions</h1><p><blockquote class="twitter-tweet" lang="en"><p>Cool little Gulp based static site generator: <a href="http://t.co/8rZtptTAqX">http://t.co/8rZtptTAqX</a> by <a href="https://twitter.com/jrhicks">@jrhicks</a></p>&mdash; Taylor Otwell - Laravel Founder (@taylorotwell) <a href="https://twitter.com/taylorotwell/statuses/496831540266295296">August 6, 2014</a></blockquote></p>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<p><blockquote class="twitter-tweet" lang="en"><p>Looks good, something worth to play with RT <a href="https://twitter.com/taylorotwell">@taylorotwell</a>: Cool little Gulp based static site generator: <a href="http://t.co/MMyB0E0lZk">http://t.co/MMyB0E0lZk</a> by <a href="https://twitter.com/jrhicks">@jrhicks</a></p>&mdash; Robert Deutz (@rdeutz) <a href="https://twitter.com/rdeutz/statuses/496904589753724928">August 6, 2014</a></blockquote></p>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 <!-- end -->
 </div>
 
 <div class="col-md-3">
     <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
         <ul class="nav bs-docs-sidenav">
-            
-            
             
             
             
@@ -360,11 +359,7 @@ DIY PRESENTATION micro-framework
             
             
             
-            <li><a href="#md-mentions">Mentions</a></li>
-            
-            
-            
-            
+            <li><a href="#md-notable-mentions">Notable Mentions</a></li>
             
             
             
@@ -406,6 +401,7 @@ DIY PRESENTATION micro-framework
 
 <!-- inject:js -->
 <script src="/wsmith/js/docs.min.js"></script>
+<script src="/wsmith/js/pulltab.js"></script>
 <!-- endinject -->
 
 <script>
