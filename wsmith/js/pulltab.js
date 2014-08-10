@@ -1,5 +1,5 @@
 $('#sidebox .tab').toggle(function(){
-    $('#sidebox').animate({'bottom':0});
+    $('#sidebox').animate({'top': '200px;'});
 }, function(){
-    $('#sidebox').animate({'bottom':-$('#sidebox_content').height()});
+    $('#sidebox').animate({'top':-$('#sidebox_content').height()});
 });

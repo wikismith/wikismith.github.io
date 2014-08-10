@@ -16,6 +16,7 @@
   -webkit-transform-origin: 100% 100% 0;
   -ms-transform-origin: 100% 100% 0;
   transform-origin: 100% 100% 0;
+
 }
 
 .crp-CornerRibbon {
@@ -50,4 +51,8 @@
 
 .crp-CornerRibbon:after {
   bottom: 1px;
+}
+
+.ribbon {
+    color: white;
 }
