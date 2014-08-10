@@ -67,7 +67,7 @@ h1 h2 h3 h4 h5 h6 h7 h8 {
         bottom: -3.5em;
         margin: 0px;
         padding: 0px;
-        height: 12em;
+        height: 9em;
         display: block;
         right: -1em;
     }
@@ -101,7 +101,7 @@ h1 h2 h3 h4 h5 h6 h7 h8 {
         bottom: -3.5em;
         margin: 0px;
         padding: 0px;
-        height: 15em;
+        height: 10em;
         display: block;
         right: 1em;
     }
@@ -120,11 +120,11 @@ h1 h2 h3 h4 h5 h6 h7 h8 {
     }
 
     .bs-docs-header p.home {
-        margin-right: 500px;
+        margin-right: 600px;
     }
 
     .bs-docs-header h1.home {
-        margin-right: 500px;
+        margin-right: 600px;
     }
 
 }
